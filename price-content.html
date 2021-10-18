@@ -1,0 +1,461 @@
+<!--#set var="title" value="Products"-->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title><!--#echo var="title" --></title>
+	<meta property="og:url" content="https://www.bagpack.com" />
+  <meta property="og:title" content='<!--#echo var="title" -->' />
+  <meta property="og:description" content="Thousands of different bags" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/dest/thumb/9.jpg" />
+
+
+	<meta name="description" content="Various bags, not expensive, wide range of bags, best bags">
+
+	<link rel="shortcut icon" href="images/dest/favicon/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="images/dest/favicon/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/dest/favicon/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/dest/favicon/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://use.fontawesome.com/d260446e08.js"></script>
+	<link rel="stylesheet" href="libs/icons/font_awesome_5.15.0_pro/font_awesome.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+2|Baloo+Chettan+2|Lato|Raleway&display=swap" rel="stylesheet">
+
+	<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+		<div class="rg-image-wrapper">
+			{{if itemsCount > 1}}
+				<div class="rg-image-nav">
+					<a href="#" class="rg-image-nav-prev">Previous Image</a>
+					<a href="#" class="rg-image-nav-next">Next Image</a>
+				</div>
+			{{/if}}
+			<div class="rg-image"></div>
+			<div class="rg-loading"></div>
+			<div class="rg-caption-wrapper">
+				<div class="rg-caption" style="display:none;">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</script>
+
+</head>
+<body>
+<header>
+
+<nav>
+
+	<div class="brand">
+		<a href="index.html">
+		<div class="logo">
+			Pouches.com
+		</div>
+		</a>
+
+
+		<!-- Icons -->
+
+		<ul class="navbar-top">
+			<ul>
+				<li id="locBtn" title="Your city">
+				<small class="cityName">Moscow</small>
+				<span><i class="fa fa-location-arrow"></i></span>
+				</li>
+				<li id="langBtn" title="Language"><span><i class="fa fa-globe"></i></span></li>
+				<li id="phone" title="Phone Number"><span><i class="bi bi-telephone"></i></span></li>
+			</ul>
+
+			<ul>
+				<li id="mailBtn" title="Email"><span><i class="fa fa-envelope"></i></span></li>
+				<li id="find" title="Search"><span><i class="fa fa-search"></i></span></li>
+				<li title="Sign up/in"><a href="signup.html"><i class="bi bi-person"></i></a></li>
+			</ul>
+		</ul>
+
+		<!-- Location -->		
+
+		<div id="locModal" class="lochide">
+			<label>Select city</label>
+			<select class="locselect" name="" id="location" onchange="changeTown()">
+			<option value="">Moscow</option>
+			<option value="">St. Petersburg</option>
+			<option value="">Rostov-on-Don</option>
+			<option value="">Nizhny Novgorod</option>
+			<option value="">Volgograd</option>
+			<option value="">Permian</option>
+			<option value="">Kazan</option>
+			<option value="">Ekaterinburg</option>
+			<option value="">Chelyabinsk</option>
+			<option value="">Ufa</option>
+			<option value="">Omsk</option>
+			<option value="">Tyumen</option>
+			</select>
+		</div>
+
+		<!-- Basket-Modal -->
+
+		<div id = "modalWindow" class = "modal">
+
+		 <div class = "modal-content">
+
+		 	<div class="modal-close">
+				<span class = "close">
+					<small>close</small>
+					<i class="bi bi-x-circle"></i>
+				</span>
+		 	</div>
+
+			<h2 id="basketTitle">Welcome!</h2>
+
+			<p id="basketText">We wish you a pleasant shopping!</p>
+
+			<ul id="basketList" class="basket-list">
+
+					<li id="pdItem" class="">
+						<span>
+							<a href="price-content.html" class="product-name">Product Name 1</a>
+							<a href="" class="brand-name">Brand Name</a>
+						</span>
+						<span class="amount">
+
+							<button type="submit" formaction="">Buy</button>
+
+							<span class="plus" data-id="ssh" title="add">
+								<i class="bi bi-plus-circle"></i>
+							</span>
+
+							<span class="minus" data-id="ssh" title="delete">
+								<i class="bi bi-dash-circle"></i>
+							</span>
+
+							<span value="" class="out" title="amount"></span>
+						</span>
+					</li>
+
+					<li id="pdItem" class="">
+
+						<span>
+							<a href="price-content.html" class="product-name">Product Name 2</a>
+							<a href="" class="brand-name">Brand Name</a>
+						</span>
+
+						<span class="amount">
+
+							<button type="submit" formaction="">Buy</button>
+
+							<span class="plus" data-id="ssl" title="add">
+								<i class="bi bi-plus-circle"></i>
+							</span>
+
+							<span class="minus" data-id="ssl" title="delete">
+								<i class="bi bi-dash-circle"></i>
+							</span>
+
+							<span value="" class="out" title="amount"></span>
+
+						</span>
+					</li>
+
+					<li id="pdItem" class="">
+
+						<span>
+							<a href="price-content.html" class="product-name">Product Name 3</a>
+							<a href="" class="brand-name">Brand Name</a>
+						</span>
+
+						<span class="amount">
+
+							<button type="submit" formaction="">Buy</button>
+
+							<span class="plus" data-id="ssl" title="add">
+								<i class="bi bi-plus-circle"></i>
+							</span>
+
+							<span class="minus" data-id="ssl" title="delete">
+								<i class="bi bi-dash-circle"></i>
+							</span>
+
+							<span value="" class="out" title="amount"></span>
+
+						</span>
+					</li>
+
+			</ul>
+
+		 </div>
+
+		</div>
+
+
+		<!-- dropdown-toggler -->
+
+		<div class = "button">
+			<div class = "button-bar"></div>
+			<div class = "button-bar"></div>
+			<div class = "button-bar"></div>
+		</div>
+
+	</div>
+
+<!-- Search line -->	
+
+	<div class="search-container hide">
+		<input type="search" class="search" name="search" id="search" placeholder="Search">
+		<div class="iconsearch">
+			<a href=""><i class="fa fa-search"></i></a>
+		</div>
+	</div>
+
+<!-- Language -->
+
+		<div id="langModal" class="langhide">
+			<p>Choose language:</p>
+			<ul>
+				<li class="lang-option"><a href="">English (Английский)</a></li>
+				<li class="lang-option"><a href="">Русский (Russian)</a></li>
+				<li class="lang-option"><a href="">Беларусский (Беларускі)</a></li>
+				<li class="lang-option"><a href="">Украинский (Український)</a></li>
+				<li class="lang-option"><a href="">Казахский (Қазақ)</a></li>
+			</ul>
+		</div>
+
+<!-- Phone -->  
+
+		<div id="phoneModal" class="phonehide">
+			<p>Contact us:</p>
+			<ul>
+				<li class="phone-option"><a href="tel:+79374994944">Phone: +79374994944</a></li>
+				<li class="phone-option"><a href="callto:+79374994944">Skype: +79374994944</a></li>
+			</ul>
+		</div>
+
+<!-- Email -->
+
+		<div class="mail-container hide">
+			<span>Email us:</span>
+			<a href="mailto:ramazan.gallyamoff@gmail.com">ramazan.gallyamoff@gmail.com</a>
+		</div>
+
+<!-- Basket-button -->
+
+	<div id="modalButton">
+		<i class="bi bi-bag-plus bag" title="ShopCart">
+			<span></span>
+		</i>
+	</div>
+
+
+<!-- navbar -->
+
+	<div class="navbar-bottom">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="prices.html">Prices</a></li>
+			<li id="dropdown" class="dropdown_item">
+				<a href="#">Bags and Backpacks</a>
+				
+<!-- dropdown-menu -->
+
+				<ul class="dropdownmenu" id="dropdownMenu">
+					<li><a href="prices.html">Accessories for bags</a></li>
+					<li><a href="prices.html">Clutches</a></li>
+					<li><a href="prices.html">Beauticians</a></li>
+					<li><a href="prices.html">Travel bag</a></li>
+					<li><a href="prices.html">Folders-bags</a></li>
+					<li><a href="prices.html">Portfolios</a></li>
+					<li><a href="prices.html">Backpacks and satchels</a></li>
+					<li><a href="prices.html">Bags</a></li>
+					<li><a href="prices.html">For a laptop</a></li>
+					<li><a href="prices.html">Shopping bags</a></li>
+					<li><a href="prices.html">Shopping carts</a></li>
+				</ul>
+
+			</li>
+			<li><a href="about.html">About us</a></li>
+		</ul>
+	</div>
+</nav>
+
+<!-- navbar-mobile -->
+
+<ul class="mobile-nav none hidenav" id="navbarresponsive">
+	<li><a href="index.html">Home<span></span></a></li>
+	<li><a href="contact.html">Contact</a></li>
+	<li><a href="prices.html">Prices</a></li>
+	<li id="dropdownMobile" >
+		<span class="dropdown_item">Bags and Backpacks</span>
+		<div class="plus"></div>
+	</li>
+	<li><a href="about.html">About us</a></li>
+</ul>
+
+<!-- dropdown-menu-mobile -->
+
+<ul class="dropdownmenumobile" id="dropdownMenuMobile">
+	<li><a href="">Accessories for bags</a></li>
+	<li><a href="">Clutches</a></li>
+	<li><a href="">Beauticians</a></li>
+	<li><a href="">Travel bag</a></li>
+	<li><a href="">Folders-bags</a></li>
+	<li><a href="">Portfolios</a></li>
+	<li><a href="">Backpacks and satchels</a></li>
+	<li><a href="">Bags</a></li>
+	<li><a href="">For a laptop</a></li>
+	<li><a href="">Shopping bags</a></li>
+	<li><a href="">Shopping carts</a></li>
+</ul>
+</header>
+
+<body>
+<!-- <?php require "header.php"; ?> -->
+
+
+
+<main class="gallery">
+
+    <div class="container">
+      
+      <div class="content">
+        <div id="rg-gallery" class="rg-gallery">
+          <div class="rg-thumbs">
+            <!-- Elastislide Carousel Thumbnail Viewer -->
+            <div class="es-carousel-wrapper">
+              <div class="es-nav">
+                <span class="es-nav-prev">Previous</span>
+                <span class="es-nav-next">Next</span>
+              </div>
+              <div class="es-carousel">
+                <ul>
+                  <li><a href="#"><img src="images/dest/thumb/1.jpg" data-large="images/dest/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/2.jpg" data-large="images/dest/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/3.jpg" data-large="images/dest/3.jpg" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/4.jpg" data-large="images/dest/4.jpg" alt="image04" data-description="My spirits to attend this double voice accorded" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/5.jpg" data-large="images/dest/5.jpg" alt="image05" data-description="And down I laid to list the sad-tuned tale" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/6.jpg" data-large="images/dest/6.jpg" alt="image06" data-description="Ere long espied a fickle maid full pale" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/7.jpg" data-large="images/dest/7.jpg" alt="image07" data-description="Tearing of papers, breaking rings a-twain" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/8.jpg" data-large="images/dest/8.jpg" alt="image08" data-description="Storming her world with sorrow's wind and rain" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/9.jpg" data-large="images/dest/9.jpg" alt="image09" data-description="Upon her head a platted hive of straw" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/10.jpg" data-large="images/dest/10.jpg" alt="image10" data-description="Which fortified her visage from the sun" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/15.jpg" data-large="images/dest/15.jpg" alt="image15" data-description="Some beauty peep'd through lattice of sear'd age" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/16.jpg" data-large="images/dest/16.jpg" alt="image16" data-description="Oft did she heave her napkin to her eyne" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/17.jpg" data-large="images/dest/17.jpg" alt="image17" data-description="Which on it had conceited characters" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/18.jpg" data-large="images/dest/18.jpg" alt="image18" data-description="Laundering the silken figures in the brine" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/19.jpg" data-large="images/dest/19.jpg" alt="image19" data-description="That season'd woe had pelleted in tears" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/20.jpg" data-large="images/dest/20.jpg" alt="image20" data-description="And often reading what contents it bears" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/22.jpg" data-large="images/dest/22.jpg" alt="image22" data-description="In clamours of all size, both high and low" /></a></li>
+                  <li><a href="#"><img src="images/dest/thumb/23.jpg" data-large="images/dest/23.jpg" alt="image23" data-description="Sometimes her levell'd eyes their carriage ride" /></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Elastislide Carousel Thumbnail Viewer -->
+          </div><!-- rg-thumbs -->
+        </div><!-- rg-gallery -->
+      </div><!-- content -->
+    </div><!-- container -->
+
+<div class="bag-block">
+  <h1>ErichKrause / Zip tote bag ErichKrause 14L Python Print</h1>
+  <p class="bag-price">
+    <span data-price="643"><b>643 ₽</b></span>
+      <span data-oldprice="1022"><sup><del>1 022 ₽</del></sup></span>
+  </p>
+  <p class="bag-color">color:<span>brown</span></p>
+  <div class="basket-btn">
+    <input 
+    type="submit"
+    id="addCart" 
+    role="button" 
+    name="addtocart" 
+    formaction="basket.php"
+    formmethod="post" 
+    value="Add to Cart">
+    <i class="bi bi-heart" id="heartIcon">
+      <span id="heartnum" value="0"></span>
+    </i>
+  </div>
+  <p class="bag-delivery">
+  <span>Delivery: </span>
+  <span>approximately February 19 (from warehouse)</span>
+  </p>
+  <ul>
+    <li><i class="bi bi-box"></i><span>Free shipping</span></li>
+    <li><i class="bi bi-bookmark"></i><span>Fitting</span></li>
+    <li><i class="bi bi-arrow-clockwise"></i><span>21 days for return</span></li>
+  </ul>
+
+  <p class="bag-seller">
+    <span></span>
+    <span></span>
+    <i></i>
+  </p>
+</div>
+
+</main>
+
+<footer>
+		<div class="footer-nav">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="prices.html">Prices</a></li>
+			<li><a href="about.html">About us</a></li>
+		</ul>
+	</div>
+
+	<div class="contact-social">
+		<h3>Stay in touch with us</h3>
+		<ul>
+			<li>
+				<ul>
+					<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://ru-ru.facebook.com/"><i class="fa fa-facebook-f"></i></a></li>
+					<li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+					<li><a href="https://ok.ru/"><i class="fa fa-odnoklassniki"></i></a></li>
+					<li><a href="https://vk.com/"><i class="fa fa-vk"></i></a></li>
+				</ul>
+				<ul>	
+					<li><a href="https://telegram.org/"><i class="fa fa-telegram"></i></a></li>
+					<li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://www.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
+					<li><a href="https://vimeo.com/"><i class="fa fa-vimeo-v"></i></a></li>
+					<li><a href="https://www.quora.com/"><i class="fa fa-quora"></i></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<address>
+	  <strong>Pouches.com</strong><br>
+	  <a href="mailto:ramazan.gallyamoff@yandex.ru">ramazan.gallyamoff@yandex.ru</a><br>
+	  <a href="https://www.webdevmaster.ru">www.webdevmaster.ru</a><br>
+	  600 W. Chicago Ave.<br>
+	  Suite 620<br>
+	  Chicago, IL 60654<br>
+	  USA 
+	</address>
+	
+
+</footer>
+<script src="js/main.min.js"></script> 
+<script src="js/gallery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
+<!-- <?php require "footer.php"; ?> -->
