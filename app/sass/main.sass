@@ -1,0 +1,300 @@
+$gray: #444455
+$lightblue: #2A2A82
+$darkblue: #0C0C26
+$darkblue2: #101032
+$lightgray: #AAA
+
+$ral: 'Raleway', sans-serif
+$roboto: 'Roboto', sans-serif
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  background: url('../images/dest/webp/main_photo.webp')
+  background-color: rgba(255, 255, 255, .7)
+  background-size: cover
+  background-attachment: fixed
+
+
+
+
+.title_image
+  height: 53vw
+  min-height: 240px  
+  background-image: url('../images/dest/webp/more_bags.webp')
+  background-attachment: fixed
+  background-size: contain
+
+  .h-wrapper
+    position: relative
+    top: 40%
+    margin: 0
+    padding: 15px 0
+    background-color: rgba(255, 255, 255, 0.7)
+    z-index: 4
+    
+    &:hover
+      background-color: rgba(255, 255, 255, 0.9)
+
+    @media screen and (max-width: 576px)
+      top: 15%
+      padding-right: 2vw
+      align-items: center
+
+    @media screen and (max-width: 470px)
+      padding: 2vw 4vw  
+
+    h1.title
+      position: relative
+      margin: 0
+      font: lighter calc(32px + 0.6vw) 'Baloo Chettan 2', cursive
+      text-align: center
+      display: flex
+      justify-content: center
+      flex-wrap: nowrap
+      cursor: pointer
+      color: $darkblue2
+      animation: animate__slideInLeft
+      animation-duration: 2s
+
+      @media screen and (max-width: 768px)
+        font: lighter calc(24px + 0.6vw) 'Baloo Chettan 2', cursive
+        flex-direction: column
+
+      a
+        text-decoration: none
+        margin-left: 15px
+        color: $darkblue
+        font: lighter calc(32px + 0.6vw) 'Baloo Chettan 2', cursive
+        font-weight: 400
+        padding-bottom: 0
+        border-bottom: 2px solid transparent
+        white-space: nowrap
+
+        &:hover
+          border-bottom: 2px solid $darkblue
+
+        @media screen and (max-width: 768px)
+          font: lighter calc(24px + 0.6vw) 'Baloo Chettan 2', cursive
+
+        @media screen and (max-width: 768px)
+          &:hover
+            border-bottom: 2px solid transparent  
+
+.video-wrapper
+  position: absolute
+  z-index: 5
+  width: 100vw
+  height: 56.5vw
+  background: rgba(255, 255, 255, .3)
+
+  h2
+    position: relative
+    width: 60%
+    top: -25px
+    z-index: 6 
+    font-size: calc(14px + 1.5vw)
+    text-align: center
+    color: $darkblue
+    padding: 3vw
+    border-radius: 2px
+    background: rgba(255, 255, 255, .7)
+    transform: translate(30%, 50%) 
+
+
+
+video#video
+  width: 100vw !important
+  position: relative
+  z-index: 4
+
+section.first
+  position: relative
+  width: 100%
+  height: auto
+  background-color: #D1D1D1FF
+  display: flex
+  flex-direction: column
+  box-sizing: content-box
+  background: url('../images/dest/webp/lamp.webp')
+  background-size: cover
+
+  .first_title
+    position: relative
+    padding: 2vw 0
+    display: flex
+    align-items: center
+    justify-content: center 
+
+    @media screen and (max-width: 768px)
+      flex-direction: column
+
+    h2
+      margin: 2vw 4vw
+      padding: 0   
+      height: auto 
+      font-family: 'Baloo Chettan 2', cursive
+      font-size: calc(1rem + 0.5vw)
+      text-align: center
+
+      @media screen and (max-width: 768px)
+        word-wrap: break-word
+        max-height: 20px
+
+    i
+      font-size: calc(20px + 1vw)
+
+      @media screen and (max-width: 768px)
+        margin-top: 1vw
+
+      @media screen and (max-width: 576px)
+        margin-top: 17px
+
+      @media screen and (max-width: 320px)
+        margin-top: 20px
+
+  .img-container
+    position: relative
+    width: 100%
+    display: flex
+    justify-content: center
+
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      align-items: center
+
+    picture
+      width: 40%
+
+      img
+        position: relative
+        width: 100%
+        transition: all 2s ease
+        box-shadow: 2px 2px 5px
+
+        &:hover
+          transform: scale(1.2)
+
+
+    .images-block
+      position: relative
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      justify-content: space-around
+      width: 50%
+
+      picture
+        position: relative
+        width: 35%
+
+        &:nth-child(odd)
+          top: -15px
+
+        &:nth-child(even)
+          bottom: -15px 
+
+        &:nth-child(1)
+          left: 20px  
+
+        &:nth-child(2)
+          left: 20px  
+
+        img
+          position: relative
+          width: 100%
+          cursor: pointer
+
+          &.sepia
+            filter: sepia(80%)
+            transition: all 0.5s ease
+
+            &:hover
+            filter: sepia(0%)
+
+          &.saturate
+            filter: saturate(0%)
+            transition: all 0.5s ease
+
+            &:hover
+              filter: saturate(100%)
+
+          &.blur
+            transition: all 0.5s ease
+
+            &:hover
+              filter: blur(1px)
+
+
+section.second
+  position: relative
+  background-color: #D1D1D1FF
+
+  & .img-container
+    padding: 1vw 0 0 0
+    height: 40vw
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      height: 80vw
+      align-items: center
+
+    @media screen and (max-width: 576px)
+      height: 90vw
+    
+
+    .img-left
+      padding: 0
+      margin: 0
+      width: 47%
+      background: url('../images/dest/webp/3.webp')
+      background-size: cover
+
+      @media screen and (max-width: 768px)
+        width: 70%
+        height: 50%
+
+      @media screen and (max-width: 576px)
+        width: 80%
+          
+
+    .img-right
+      padding: 0
+      margin: 0
+      width: 47%
+      background: url('../images/dest/webp/2.webp')
+      background-size: cover
+
+      @media screen and (max-width: 768px)
+        width: 70%
+        height: 50%
+
+      @media screen and (max-width: 576px)
+        width: 80%
+      
+
+    .img-right h2, .img-left h2
+      position: relative
+      z-index: 2
+      top: 10%
+      padding: 15px 20px
+      color: #000
+      text-align: center
+      text-transform: uppercase
+      background: rgba(255, 255, 255, .6)
+      transition: all 1s ease
+
+      &:hover
+        background: rgba(255, 255, 255, 1)
+
+
+  

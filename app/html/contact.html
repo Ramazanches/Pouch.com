@@ -1,0 +1,38 @@
+<!--#set var="title" value="Our contacts"-->
+<!--#include virtual="../header.html"-->
+<!-- <?php require "header.php"; ?> -->
+<main>
+  <div class="contact-form">
+    <h3>Contact Us</h3>
+    <form action="signup.php" method="post" enctype="text/plain">
+      <ul class="wrapper">
+        <li class="form-row">
+          <label><i class="bi bi-person-fill"></i></label>
+          <input type="text" name="firstname" placeholder="First Name" required>
+        </li>
+        <li class="form-row">
+          <label><i class="bi bi-person-fill"></i></label>
+          <input type="text" name="lastname" placeholder="Last Name" required>
+        </li>
+        <li class="form-row">
+          <label><i class="bi bi-emoji-smile"></i></label>
+          <input type="text" name="townborn" placeholder="Townborn" required>
+        </li>
+        <li class="form-row">
+          <label><i class="bi bi-envelope-fill"></i></label>
+          <input type="email" name="email" placeholder="Email" required>
+        </li>
+        <li class="form-row">
+          <label><i class="bi bi-telephone-fill"></i></label>
+          <input type="tel" name="phone" placeholder="Phone" required>
+        </li>
+        <li class="form-row">
+          <button type="submit">Ask</button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</main>
+
+<!--#include virtual="../footer.html"-->
+<!-- <?php require "footer.php"; ?> -->

@@ -1,0 +1,29 @@
+<!--#set var="title" value="SignIn"-->
+<!--#include virtual="../header.html"-->
+<!-- <?php require "header.php"; ?> -->
+<main>
+<div class="contact-form">
+  <h3>Sign In</h3>
+<form action="signup.php" method="post" enctype="text/plain">
+	  <ul class="wrapper">
+	    <li class="form-row">
+	      <label><i class="bi bi-envelope-fill"></i></label>
+	      <input type="email" name="email" placeholder="Email" required>
+	    </li>
+	    <li class="form-row">
+	      <label><i class="bi bi-door-open"></i></label>
+	      <input type="password" name="password" placeholder="Password" required>
+	    </li>
+	    <li class="form-row">
+	      <button type="submit">Sign In</button>
+	    </li>
+	  </ul>
+	</form>	
+</div>
+
+<p class="conditions">Not registered yet?<a href="signup.html"> Register</a> an account</p>
+
+<p class="conditions">By continuing, you agree to BagPack <a href="conditions.html">Conditions of Use</a> and <a href="privacy.html">Privacy Notice</a>.</p>
+</main>
+<!--#include virtual="../footer.html"-->
+<!-- <?php require "footer.php"; ?> -->
