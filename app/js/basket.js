@@ -24,7 +24,7 @@ modalBtnFchild.firstElementChild.innerHTML = basketChildLength;
 
 
 let amount = document.querySelectorAll('.amount');
-	for (let i=0; i < amount.length; i++) {
+	for (let i = 0; i < amount.length; i++) {
 		let minus = amount[i].querySelector('.minus');
 		let plus = amount[i].querySelector('.plus');
 		let out = amount[i].querySelector('.out');

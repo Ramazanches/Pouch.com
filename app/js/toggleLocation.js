@@ -1,4 +1,4 @@
-"use strict";
+
 /*switching locations*/
 const locBtn = document.querySelector('#locBtn');
 const locModal = document.querySelector('#locModal');

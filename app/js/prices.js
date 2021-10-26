@@ -131,23 +131,24 @@ for (let i = 0; i < gblock.length; i++) {
 		}
 }
 
+
 /*Sort by price reduction/increase, rating, discount */
 
 
-document.querySelector('#sortAsc').addEventListener('click', () => {
+/*document.querySelector("#sortAsc").onclick = () => {
 	sortList("data-price");
-});
-document.querySelector('#sortDesc').addEventListener('click', () => {
+};
+document.querySelector("#sortDesc").onclick = () => {
 	sortListDesc("data-price");
-});
-document.querySelector('#sortRating').addEventListener('click', () => {
+};
+document.querySelector("#sortRating").onclick = () => {
 	sortListDesc("data-rating");
-});
-document.querySelector('#sortDiscount').addEventListener('click', () => {
+};
+document.querySelector("#sortDiscount").onclick = () => {
 	sortListDesc("data-discount");
-});
+};
 
-function sortList(sortType) {
+	function sortList(sortType) {
     let sortwrapper = document.querySelector('.gallery-wrap');
     for (let i = 0; i < sortwrapper.children.length - 1; i++) {
         for (let j = i; j < sortwrapper.children.length; j++) {
@@ -177,6 +178,7 @@ function sortListDesc(sortType) {
 function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
+*/
 
 
 

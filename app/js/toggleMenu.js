@@ -1,4 +1,4 @@
-'use sctrict';
+
 
 let dropdown = document.getElementById('dropdown');
 let menu = document.getElementById('dropdownMenu');
