@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<title>Политика конфиденциальности</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Various bags, not expensive, wide range of bags, best bags">
+<meta name="keywords" content="">
+<meta name="application-name" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+
+
+<meta property="og:title" content='@@title'>
+
+<meta property="og:description" content="Thousands of different bags">
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="Image description">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="">
+
+<link rel="canonical" href="">
+
+
+<!-- Favicon -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon/all/favicon-48x48.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/all/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/all/favicon-16x16.png">
+
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
+
+<link rel="manifest" href="img/favicon/manifest.json">
+
+<meta name="msapplication-TileColor" content="#da532c">
+
+<meta name="theme-color" content="#ffffff">
+
+
+<!-- Assets -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/style.min.css">
+
+
+
+
+
+</head>
+<body>
+
+<header class="navbar">
+		<div class="navbar__nav">
+
+			<div class="navbar__brand">
+				<a href="index.html" class="navbar__logo">
+					Pouch.com
+				</a>
+			</div>
+			
+			<div class="navbar__contacts-menu">
+				<!-- Contacts -->	
+					<ul class="navbar__contacts"> 
+		<li class="navbar__item _navbar__item" id="localBtn" title="Your city">
+			<small class="navbar__small">Moscow</small>
+			<span class="navbar__icon">
+				<i class="fa fa-location-arrow"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="langBtn" title="Language">
+			<span class="navbar__icon">
+				<i class="fa fa-globe"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="telBtn" title="Phone Number">
+			<span class="navbar__icon">
+				<i class="fa fa-phone"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="mailBtn" title="Email">
+			<span class="navbar__icon">
+				<i class="fa fa-envelope"></i>
+			</span>
+		</li>
+		<li class="navbar__item search" id="search" title="Search">
+			<span class="navbar__icon">
+				<i class="fa fa-search"></i>
+			</span>
+		</li>
+		<li class="navbar__item sign" title="Sign up/in">
+			<a class="navbar__icon" href="signup.html">
+				<i class="fa-solid fa-person-walking-arrow-right"></i>
+			</a>
+		</li>
+	</ul>
+
+	<!-- Basket-button -->
+
+	<div class="navbar__modal-toggler open-modal" data-modal="1">
+		<i class="bi bi-bag-plus" title="ShopCart"></i>
+	</div>
+
+
+				<div id="menuBurger" class="navbar__burger">
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__title">Menu</div>
+				</div>				
+			</div>
+
+			<!-- Location -->		
+			<div id="localModal" class="navbar__location hide">
+	<label for="disabled" class="location__label">Select city</label>
+	<select class="location__select" id="locSelect">
+	</select>
+</div>
+
+<!--select styles path: sass/components/select.sass -->
+
+			<!-- Search line -->	
+			<form class="navbar__search hide">
+				<input class="navbar__search__inp" type="search" name="search" id="search" placeholder="Search">
+				<div class="navbar__search__icon">
+					<a href="" class="navbar__search__link">
+						<i class="fa fa-search"></i>
+					</a>
+				</div>
+			</form>
+
+			<!-- Language -->
+			<div class="navbar__lang lang hide" id="langModal">
+				<p class="lang__text">Choose language:</p>
+				<ul class="lang__list"></ul>
+			</div>
+			<!-- Phone -->  
+					<div id="telModal" class="navbar__phone hide">
+			<p class="phone__text">Contact us:</p>
+			<ul class="phone__list">
+				<li class="phone__item">
+					<a href="tel:+79374994944" class="phone__link">Phone: +79374994944</a>
+				</li>
+				<li class="phone__item">
+					<a href="callto:+79374994944" class="phone__link">Skype: +79374994944</a>
+				</li>
+			</ul>
+		</div>
+
+			<!-- Email -->
+			<div class="navbar__mail hide">
+				<span class="navbar__text">Email us:</span>
+				<a 
+				href="mailto:ramazan.gallyamoff@gmail.com" 
+				class="navbar__link">ramazan.gallyamoff@gmail.com</a>
+			</div>
+
+			<!-- Basket -->
+			
+<!-- Basket-Modal -->
+<div class="navbar__modal-overlay hide" id="overlay"></div>
+
+<div class = "navbar__modal modal__navbar hide" data-modal="1">
+	<div class="modal__basket basket__modal">
+		<div class="basket__close">
+			<span class = "basket__icon modal-close">
+				<small class="basket__text p5">close</small>
+				<i class="bi bi-x-circle basket__i"></i>
+			</span>
+		</div>
+
+		<h2 class="basket__title h2">Welcome!</h2>
+		<h4 class="basket__subtitle p2">We wish you a pleasant shopping!</h4>
+			
+		<ul class="basket__list" id="basketList">
+<!-- 			<li id="basketItem" class="basket__item">
+				<div class="basket__name">
+					<a href="price-content.html" class="basket__product">Product Name 1</a>
+					<p class="basket__brand">Brand Name</p>
+				</div>
+				<div class="basket__amount">
+					<a href="" class="basket__btn" type="submit">Buy</a>
+					<span class="basket__plus" title="more">
+						<i class="bi bi-plus-circle"></i>
+					</span>
+					<span class="basket__minus" title="less">
+						<i class="bi bi-dash-circle"></i>
+					</span>
+					<span class="basket__out" title="amount">1</span>
+					<div class="basket__delete" id="basketItemDel">
+						<i class="fa-solid fa-xmark basket__delete__icon"></i>
+					</div>
+
+				</div>
+			</li> -->
+		</ul>		
+	</div>
+</div>
+
+
+		</div>
+
+		<div class="navbar__menu">
+							<ul class="navbar__desc-menu list" id="navbarDesc">
+					<li class="list__item">
+						<a href="index.html" class="list__link nav">Home</a>
+					</li>
+					<li class="list__item">
+						<a href="contact.html" class="list__link nav">Contacts</a>
+					</li>
+					<li class="list__item">
+						<a href="catalog.html" class="list__link nav">Catalog</a>
+					</li>
+					<li class="list__item _list__item" id="dropdownToggler">
+						<span href="" class="list__link nav">Bags&Backpacks</span>
+						<div class="list__icon"></div>
+
+						<ul class="list__dropdown-desc hide" id="dropdownMenu">
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Accessories for bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Clutches</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Beauticians</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Travel bag</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Folders-bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Portfolios</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Backpacks and satchels</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">For a laptop</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping carts</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<a href="about.html" class="list__link nav">About us</a>
+					</li>
+				</ul>
+
+							<ul class="navbar__mobile-menu list hide" id="menuMobile">
+					<li class="list__item">
+						<a href="index.html" class="list__link">Home</a>
+					</li>
+					<li class="list__item">
+						<a href="contact.html" class="list__link">Contact</a>
+					</li>
+					<li class="list__item">
+						<a href="catalog.html" class="list__link">Prices</a>
+					</li>
+					<li class="list__item _list__item">
+						<span href="" class="list__link" id="dropdown">Bags&Backpacks</span>
+						<div class="list__icon"></div>
+
+						<ul class="list__dropdown-desc hide" id="dropdownMenu">
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Accessories for bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Clutches</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Beauticians</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Travel bag</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Folders-bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Portfolios</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Backpacks and satchels</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">For a laptop</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping carts</a>
+							</li>
+						</ul>
+
+					</li>
+					<li class="navbar__item">
+						<a href="about.html" class="navbar__link">About us</a>
+					</li>
+				</ul>
+		</div>
+
+</header>
+
+<main class="privacy">
+	<article class="privacy__article article__privacy">
+		<h1 class="article__title h3">Pouch.com Privacy Notice</h1>
+		<p class="article__text article_text p1"> 
+			<strong class="article__strong">Last updated: February 12, 2021.</strong>
+			To see prior version, 
+			<span class="article__span p2 p2">click
+				<a class="article__link p2" href="" target="_blank">here</a>
+			</span>.
+		</p>
+		 
+		<p class="article__text txt-ind p1">We know that you care how information about you is used and shared, and we appreciate your trust that we will do so carefully and sensibly. This Privacy Notice describes how Pouch.com and its affiliates (collectively "Pouch") collect and process your personal information through Pouch websites, devices, products, services, online and physical stores, and applications that reference this Privacy Notice (together "Pouch Services").
+			<strong class="article__strong" class="article__strong">By using Pouch Services, you are consenting to the practices described in this Privacy Notice.</strong> 
+		</p>
+
+		<ul class="article__list"> 
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">What Personal Information About Customers Does Pouch Collect?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">For What Purposes Does Pouch Use Your Personal Information?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">What About Cookies and Other Identifiers?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">Does Pouch Share Your Personal Information?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">How Secure Is Information About Me?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">What About Advertising?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">What Information Can I Access?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">What Choices Do I Have?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">Are Children Allowed to Use Pouch Services?</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">EU-US and Swiss-US Privacy Shield</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">California Consumer Privacy Act</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">Conditions of Use, Notices, and Revisions</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">Related Practices and Information</a>
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2">Examples of Information Collected</a>
+				</span>
+			</li>
+		</ul>
+	</article>
+
+	<article class="privacy__article article">
+		<h2 class="article__title h3">What Personal Information About Customers Does Pouch Collect?</h2>  
+		<p class="article__text p1">We collect your personal information in order to provide and continually improve our products and services.</p>
+	
+		<p class="article__text p1">Here are the types of personal information we collect:</p>
+		 
+				
+		<ul class="article__list" id=""> 
+			<li class="article__item">
+				<span class="article__span p2"> 
+					<strong class="article__strong" class="article__strong">Information You Give Us:</strong> We receive and store any information you provide in relation to Pouch Services. Click <a href="" class="article__link p2">here</a> to see examples of what we collect. You can choose not to provide certain information, but then you might not be able to take advantage of many of our Pouch Services.
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span txt-ind p2">
+					<strong class="article__strong" class="article__strong">Automatic Information:</strong> We automatically collect and store certain types of information about your use of Pouch Services, including information about your interaction with content and services available through Pouch Services. Like many websites, we use "cookies" and other unique identifiers, and we obtain certain types of information when your web browser or device accesses Pouch Services and other content served by or on behalf of Pouch on other websites. Click <a href="" class="article__link p2">here</a> to see examples of what we collect.
+				</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span txt-ind p2">
+					<strong class="article__strong" class="article__strong">Information from Other Sources:</strong>
+					We might receive information about you from other sources, such as updated delivery and address information from our carriers, which we use to correct our records and deliver your next purchase more easily. Click<a href="" class="article__link p2">here</a> to see additional examples of the information we receive. 
+				</span>
+			</li>
+		</ul>
+		 
+		<h2 class="article__title h3">For What Purposes Does Pouch Use Your Personal Information?</h2>
+		<p class="article__text txt-ind p1">We use your personal information to operate, provide, develop, and improve the products and services that we offer our customers. These purposes include:</p>
+		 
+				
+		<ul class="article__list" id="">
+			<li class="article__item">
+				<span class="article__span p2">
+					<strong class="article__strong" class="article__strong">Purchase and delivery of products and services.</strong> We use your personal information to take and handle orders, deliver products and services, process payments, and communicate with you about orders, products and services, and promotional offers.</span>
+			</li>
+	
+			<li class="article__item">
+				<span class="article__span p2">
+					<strong class="article__strong" class="article__strong">Provide, troubleshoot, and improve Pouch Services.</strong> We use your personal information to provide functionality, analyze performance, fix errors, and improve the usability and effectiveness of the Pouch Services.</span>
+			</li>
+	
+			<li class="article__item">
+				<span class="article__span p2">
+					<strong class="article__strong" class="article__strong">Recommendations and personalization.</strong> We use your personal information to recommend features, products, and services that might be of interest to you, identify your preferences, and personalize your experience with Pouch Services.</span>
+			</li>
+	
+			<li class="article__item">
+				<span class="article__span p2">
+					<strong class="article__strong" class="article__strong">Provide voice, image and camera services.</strong> 
+					When you use our voice, image and camera services, we use your voice input, images, videos, and other personal information to respond to your requests, provide the requested service to you, and improve our services. For more information about Alexa voice services , click <a href="" class="article__link p2" target="_blank">here</a>.</span>
+			</li>
+	
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Comply with legal obligations.</strong>
+				In certain cases, we collect and use your personal information to comply with laws. For instance, we collect from sellers information regarding place of establishment and bank account information for identity verification and other purposes.</span>
+			</li>
+	
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Communicate with you.</strong>
+				We use your personal information to communicate with you in relation to Pouch Services via different channels (e.g., by phone, email, chat).</span>
+			</li>
+	
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Advertising.</strong> 
+					We use your personal information to display interest-based ads for features, products, and services that might be of interest to you. We do not use information that personally identifies you to display interest-based ads. To learn more, please read our<span class="article__span p2">
+					<a href="" class="article__link p2" target="_blank">Interest-Based Ads</a></span>notice.</span>
+			</li>
+	
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Fraud Prevention and Credit Risks.</strong> We use personal information to prevent and detect fraud and abuse in order to protect the security of our customers, Pouch, and others. We may also use scoring methods to assess and manage credit risks.</span>
+			</li>
+		</ul>
+	</article>
+
+	<article class="privacy__article article">
+		<h2 class="article__title h3"> What About Cookies and Other Identifiers? </h2> 
+		<p class="article__text p1">To enable our systems to recognize your browser or device and to provide and improve Pouch Services, we use cookies and other identifiers. For more information about cookies and how we use them, please read our <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Cookies Notice</a></span>.</p>
+		 
+		<h2 class="article__title h3"> Does Pouch Share Your Personal Information?</h2>  
+		<p class="article__text p1">Information about our customers is an important part of our business, and we are not in the business of selling our customers' personal information to others. We share customers' personal information only as described below and with subsidiaries Pouch.com, Inc. controls that either are subject to this Privacy Notice or follow practices at least as protective as those described in this Privacy Notice.</p>
+		 
+		<ul class="article__list" id=""> 
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Transactions involving Third Parties:</strong> We make available to you services, products, applications, or skills provided by third parties for use on or through Pouch Services. For example, you can order products from third parties through our stores, download applications from third-party application providers from our App Store, and enable third-party skills through our Alexa services. We also offer services or sell product lines jointly with third-party businesses, such as co-branded credit cards. You can tell when a third party is involved in your transactions, and we share customers' personal information related to those transactions with that third party.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2"> <strong class="article__strong">Third-Party Service Providers:</strong> We employ other companies and individuals to perform functions on our behalf. Examples include fulfilling orders for products or services, delivering packages, sending postal mail and email, removing repetitive information from customer lists, analyzing data, providing marketing assistance, providing search results and links (including paid listings and links), processing payments, transmitting content, scoring, assessing and managing credit risk, and providing customer service. These third-party service providers have access to personal information needed to perform their functions, but may not use it for other purposes.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Business Transfers: </strong>As we continue to develop our business, we might sell or buy other businesses or services. In such transactions, customer information generally is one of the transferred business assets but remains subject to the promises made in any pre-existing Privacy Notice (unless, of course, the customer consents otherwise). Also, in the unlikely event that Pouch.com, Inc. or substantially all of its assets are acquired, customer information will of course be one of the transferred assets.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2"> <strong class="article__strong">Protection of Pouch and Others:</strong> We release account and other personal information when we believe release is appropriate to comply with the law; enforce or apply our <a href="" class="article__link p2" target="_blank">Conditions of Use</a> and other agreements; or protect the rights, property, or safety of Pouch, our users, or others. This includes exchanging information with other companies and organizations for fraud protection and credit risk reduction.</span>
+			</li>
+		</ul>
+
+		<p class="article__text p1">Other than as set out above, you will receive notice when personal information about you might be shared with third parties, and you will have an opportunity to choose not to share the information.</p>
+		
+		<h2 class="article__title h3"> How Secure Is Information About Me? </h2> 
+		<p class="article__text p1">We design our systems with your security and privacy in mind.</p>
+				
+		<ul class="article__list" id=""> 
+			<li class="article__item">
+				<span class="article__span p2">We work to protect the security of your personal information during transmission by using encryption protocols and software. </span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">We follow the Payment Card Industry Data Security Standard (PCI DSS) when handling credit card data. </span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">We maintain physical, electronic, and procedural safeguards in connection with the collection, storage, and disclosure of customer personal information. Our security procedures mean that we may ask to verify your identity before we disclose personal information to you.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">Our devices offer security features to protect them against unauthorized access and loss of data. You can control these features and configure them based on your needs. Click <a href="" class="article__link p2" target="_blank">here</a> for more information on how to manage the security settings of your device.</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">It is important for you to protect against unauthorized access to your password and to your computers, devices, and applications. We recommend using a unique password for your Pouch account that is not used for other online accounts. Be sure to sign off when finished using a shared computer. Click <a href="" class="article__link p2" target="_blank">here</a> for more information on how to sign off.</span>
+			</li>
+		</ul>
+	</article>
+
+	<article class="privacy__article article">	
+		<h2 class="article__title h3"> What About Advertising? </h2>  
+				
+		<ul class="article__list" id="">
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Third-Party Advertisers and Links to Other Websites:</strong> Pouch Services may include third-party advertising and links to other websites and apps. Third-party advertising partners may collect information about you when you interact with their content, advertising, and services. For more information about third-party advertising at Pouch, including interest-based ads, please read our <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Interest-Based Ads</a></span> notice. To adjust your advertising preferences, please go to the <a href="" class="article__link p2" target="_blank">Advertising Preferences</a> page.</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2"><strong class="article__strong">Use of Third-Party Advertising Services:</strong> We provide ad companies with information that allows them to serve you with more useful and relevant Pouch ads and to measure their effectiveness. We never share your name or other information that directly identifies you when we do this. Instead, we use an advertising identifier like a cookie or other device identifier. For example, if you have already downloaded one of our apps, we will share your advertising identifier and data about that event so that you will not be served an ad to download the app again. Some ad companies also use this information to serve you relevant ads from other advertisers. You can learn more about how to opt-out of interest-based advertising by going to the <a href="" class="article__link p2" target="_blank">Advertising Preferences</a> page.</span>
+			</li>
+		</ul>
+	</article>
+
+	<article class="privacy__article article">
+		<h2 class="article__title h3"> What Information Can I Access?</h2>  
+		<p class="article__text p1">You can access your information, including your name, address, payment options, profile information, Prime membership, household settings, and purchase history in the "Your Account" article of the website. Click <a href="" class="article__link p2">here</a> for a list of examples that you can access.</p>
+		
+		<h2 class="article__title h3"> What Choices Do I Have? </h2> 
+		<p class="article__text p1">If you have any questions as to how we collect and use your personal information, please contact our <a href="" class="article__link p2" target="_blank">Customer Service</a>. Many of our Pouch Services also include settings that provide you with options as to how your information is being used. </p>
+		 
+		<ul class="article__list" id=""> 
+			<li class="article__item">
+				<span class="article__span p2">As described above, you can choose not to provide certain information, but then you might not be able to take advantage of many of the Pouch Services.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">You can add or update certain information on pages such as those referenced in <a href="" class="article__link p2">What Information Can I Access?</a>. When you update information, we usually keep a copy of the prior version for our records.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">If you do not want to receive email or other communications from us, please adjust your <a href="" class="article__link p2" target="_blank">Customer Communication Preferences</a>. If you don't want to receive in-app notifications from us, please adjust your notification settings in the app or device. </span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">If you do not want to see interest-based ads, please adjust your <a href="" class="article__link p2" target="_blank">Advertising Preferences</a>.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">The Help feature on most browsers and devices will tell you how to prevent your browser or device from accepting new cookies or other identifiers, how to have the browser notify you when you receive a new cookie, or how to block cookies altogether. Because cookies and identifiers allow you to take advantage of some essential features of Pouch Services, we recommend that you leave them turned on. For instance, if you block or otherwise reject our cookies, you will not be able to add items to your Shopping Cart, proceed to Checkout, or use any Services that require you to Sign in. For more information about cookies and other identifiers, see our <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Cookies Notice</a></span>.</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">If you want to browse our websites without linking the browsing history to your account, you may do so by logging out of your account <a href="" class="article__link p2" target="_blank">here</a> and blocking cookies on your browser.</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">You can manage the recommendations you receive in our store <a class="article__link p2" href="" target="_self">here</a>, remove recommendations you don’t want to see <a class="article__link p2" href="" target="_self">here</a> by selecting View All and Manage then selecting the Remove Items toggle that appears at the top of the page, and edit your browsing history <a class="article__link p2" href="" target="_self">here</a>.</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">You will also be able to opt out of certain other types of data usage by updating your settings on the applicable Pouch website (e.g., in "Manage Your Content and Devices"), device, or application. For more information click <a href="" class="article__link p2" target="_blank">here</a>. Most non-Pouch devices also provide users with the ability to change device permissions (e.g., disable/access location services, contacts). For most devices, these controls are located in the device's settings menu. If you have questions about how to change your device permissions on devices manufactured by third parties, we recommend you contact your mobile service carrier or your device manufacturer.</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">If you are a seller, you can add or update certain information in <span class="" href="" target="_blank">Seller Central</a></span>, update your account information by accessing your <a href="" class="article__link p2" target="_blank">Seller Account Information</a>, and adjust your email or other communications you receive from us by updating your <a href="" class="article__link p2" target="_blank">Notification Preferences</a>.</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">If you are an author, you can add or update the information you have provided in the <a href="" class="article__link p2" target="_blank">Author Portal</a> and <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Author Central</a></span>  by accessing your accounts in the Author Portal and Author Central, respectively.</span>
+			</li>
+		</ul>
+		 
+		<p class="article__text p1">In addition, to the extent required by applicable law, you may have the right to request access to or delete your personal information. If you wish to do any of these things, please contact <a href="" class="article__link p2" target="_blank">Customer Service</a>. Depending on your data choices, certain services may be limited or unavailable.</p>
+	</article> 
+
+	<article class="privacy__article article">
+		<h2 class="article__title h3"> Are Children Allowed to Use Pouch Services? </h2>  
+		<p class="article__text p1">Pouch does not sell products for purchase by children. We sell children's products for purchase by adults. If you are under 18, you may use Pouch Services only with the involvement of a parent or guardian. We do not knowingly collect personal information from children under the age of 13 without the consent of the child's parent or guardian. For more information, please see our <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Children's Privacy Disclosure</a></span>.</p>
+			 
+		<h2 class="article__title h3">EU-US and Swiss-US Privacy Shield</h2>  
+		<p class="article__text p1"> Pouch.com, Inc. participates in the EU-US and Swiss-US Privacy Shield frameworks. Click <a href="" class="article__link p2" target="_blank">here</a> to learn more.</p>
+		 
+		<h2 class="article__title article_title h3"> California Consumer Privacy Act</h2>
+		<p class="article__text p1">Click <span class="article__span p2"><a href="" class="article__link p2" target="_blank">here</a></span> to read additional disclosures required under the California Consumer Privacy Act.</p>
+		 
+		<h2 class="article__title h3"> Conditions of Use, Notices, and Revisions </h2>  
+		<p class="article__text p1">If you choose to use Pouch Services, your use and any dispute over privacy is subject to this Notice and our <a href="" class="article__link p2" target="_blank">Conditions of Use</a> , including limitations on damages, resolution of disputes, and application of the law of the state of Washington. If you have any concern about privacy at Pouch, please contact us with a thorough description, and we will try to resolve it. Our business changes constantly, and our Privacy Notice will change also. You should check our websites frequently to see recent changes. Unless stated otherwise, our current Privacy Notice applies to all information that we have about you and your account. We stand behind the promises we make, however, and will never materially change our policies and practices to make them less protective of customer information collected in the past without the consent of affected customers. </p>
+	</article>
+
+	<article class="privacy__article article">	
+		<h2 class="article__title h3">Related Practices and Information</h2>
+		<ul class="article__list" id=""> 
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2" target="_blank">Conditions of Use</a>
+				</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2" target="_blank">Seller Program Policies</a>
+				</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">
+					<a class="article__link p2" href="" target="_blank">Help Department</a>
+				</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2">
+					<a href="" class="article__link p2" target="_blank">Most Recent Purchases</a>
+				</span>
+			</li>
+			 
+			<li class="article__item">
+				<span class="article__span p2"> <a href="" class="article__link p2" target="_blank">Your Profile and Community Guidelines</a></span>
+			</li>
+		</ul>
+	</article>
+
+	<article class="privacy__article article">
+		<h2 class="article__title h3"> Examples of Information Collected </h2>  
+		<p class="article__text p1">
+			<strong class="article__strong">Information You Give Us When You Use Pouch Services</strong> 
+		</p>
+
+		<p class="article__text p1">You provide information to us when you:</p>
+		 
+		<ul class="article__list" id="">
+			<li class="article__item">
+				<span class="article__span p2">search or shop for products or services in our stores;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">add or remove an item from your cart, or place an order through or use Pouch Services;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">download, stream, view, or use content on a device or through a service or application on a device;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">provide information in <a href="" class="article__link p2" target="_blank">Your Account</a> (and you might have more than one if you have used more than one email address or mobile number when shopping with us) or <a href="" class="article__link p2" target="_blank">Your Profile</a> ;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">talk to or otherwise interact with our Alexa Voice service;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">upload your contacts;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">configure your settings on, provide data access permissions for, or interact with an Pouch device or service;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">provide information in your <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Seller Account</a></span> , <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Kindle Direct Publishing</a> account</span> , <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Developer</a> account </span>, or any other account we make available that allows you to develop or offer software, goods, or services to Pouch customers;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">offer your products or services on or through Pouch Services;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">communicate with us by phone, email, or otherwise;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">complete a questionnaire, a support ticket, or a contest entry form;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">upload or stream images, videos or other files to Prime Photos, Pouch Drive, or other Pouch Services;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">use our services such as Prime Video;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">compile Playlists, Watchlists, <a href="" class="article__link p2" target="_blank">Wish Lists</a> or other gift registries;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">participate in Discussion Boards or other community features;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">provide and rate <a href="" class="article__link p2" target="_blank">Reviews</a>;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">specify a Special Occasion Reminder; or</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">employ <a href="" class="article__link p2" target="_blank">Product Availability Alerts</a> , such as Available to Order Notifications.</span>
+			</li>
+		</ul>
+
+		<p class="article__text p1">
+			<strong class="article__strong">As a result of those actions, you might supply us with such information as:</strong> 
+		</p>
+
+		<ul class="article__list" id="">
+			<li class="article__item">
+				<span class="article__span p2">identifying information such as your name, address, and phone numbers;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">payment information;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">your age;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">your location information;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">your IP address;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">people, addresses and phone numbers listed in your Addresses;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">email addresses of your friends and other people;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">content of reviews and emails to us; </span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">personal description and photograph in <a href="" class="article__link p2" target="_blank">Your Profile</a>;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">voice recordings when you speak to Alexa;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">images and videos collected or stored in connection with Pouch Services;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">information and documents regarding identity, including Social Security and driver's license numbers;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">corporate and financial information;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">credit history information; and</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">device log files and configurations, including Wi-Fi credentials, if you choose to automatically synchronize them with your other Pouch devices.</span>
+			</li>
+		</ul>
+
+		<p class="article__text p1">
+			<strong class="article__strong">Automatic Information</strong> 
+		</p>
+		 
+		<p class="article__text p1">Examples of the information we collect and analyze include:</p>
+				
+		<ul class="article__list" id="">
+			<li class="article__item">
+				<span class="article__span p2">the internet protocol (IP) address used to connect your computer to the internet;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">login, email address, and password; </span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">the location of your device or computer;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">content interaction information, such as content downloads, streams, and playback details, including duration and number of simultaneous streams and downloads, and network details for streaming and download quality, including information about your internet service provider;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">device metrics such as when a device is in use, application usage, connectivity data, and any errors or event failures;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">Pouch Services metrics (e.g., the occurrences of technical errors, your interactions with service features and content, your settings preferences and backup information, location of your device running an application, information about uploaded images and files such as the file name, dates, times and location of your images);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">version and time zone settings;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">purchase and content use history, which we sometimes aggregate with similar information from other customers to create features like <a href="" class="article__link p2" target="_blank">Top Sellers</a>;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">the full Uniform Resource Locator (URL) clickstream to, through, and from our websites, including date and time; products and content you viewed or searched for; page response times, download errors, length of visits to certain pages, and page interaction information (such as scrolling, clicks, and mouse-overs);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">phone numbers used to call our customer service number; and</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">images or videos when you shop in our stores, or stores using Pouch Services.</span>
+			</li>
+		</ul>
+
+		<p class="article__text p1">We may also use device identifiers, cookies, and other technologies on devices, applications, and our web pages to collect browsing, usage, or other technical information.</p>
+		 
+		<p class="article__text p1">
+			<strong class="article__strong">Information from Other Sources</strong> 
+		</p>
+		 
+		<p class="article__text p1">Examples of information we receive from other sources include:</p>
+				
+		<ul class="article__list" id="">
+			<li class="article__item">
+				<span class="article__span p2">updated delivery and address information from our carriers or other third parties, which we use to correct our records and deliver your next purchase or communication more easily;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">account information, purchase or redemption information, and page-view information from some merchants with which we operate co-branded businesses or for which we provide technical, fulfillment, advertising, or other services;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">information about your interactions with products and services offered by our subsidiaries;</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">search results and links, including paid listings (such as Sponsored Links);</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">information about internet-connected devices and services linked with Alexa; and</span>
+			</li>
+
+			<li class="article__item">
+				<span class="article__span p2">credit history information from credit bureaus, which we use to help prevent and detect fraud and to offer certain credit or financial services to some customers.</span>
+			</li>
+		</ul>
+		 
+		<p class="article__text p1">
+			<strong class="article__strong">Information You Can Access</strong> 
+		</p>
+		 
+		<p class="article__text p1">Examples of information you can access through Pouch Services include:</p>
+				
+		<ul class="article__list" id="">
+			<li class="article__item">
+				<span class="article__span p2">status of recent orders (including subscriptions);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">your complete order history;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">personally identifiable information (including name, email, password, and address book);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">payment settings (including payment card information, promotional certificate and gift card balances, and 1-Click settings);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">email notification settings (including Product Availability Alerts, Delivers, Special Occasion Reminders and newsletters);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">recommendations and the products you recently viewed that are the basis for recommendations (including Recommended for You and Improve Your Recommendations);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">shopping lists and gift registries (including Wish Lists and Baby and Wedding Registries);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">your content, devices, services, and related settings, and communications and personalized advertising preferences;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">content that you recently viewed;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">voice recordings associated with your account;</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">Your Profile (including your product Reviews, Recommendations, Reminders and personal profile);</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">If you are a seller, you can access your account and other information, and adjust your communications preferences, by updating your account in <span class="article__span p2"> <a href="" class="article__link p2" target="_blank">Seller Central</a></span> .</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">If you are an author, you can access your account and other information, and update your accounts, on the <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Kindle Direct Publishing (KDP)</a></span>  or <span class="article__span p2"><a href="" class="article__link p2" target="_blank">Author Central</a></span>  website, as applicable.</span>
+			</li>
+			<li class="article__item">
+				<span class="article__span p2">If you are a developer participating in our Developer Services Program, you can access your account and other information, and adjust your communications preferences, by updating your accounts in the <span class="article__span p2">
+					<a href="" class="article__link p2" target="_blank">Developer Services Portal</a>
+				</span>.</span>
+			</li>
+		</ul>
+	</article>
+</main>
+<footer class="footer">
+	<ul class="footer__nav">
+		<li class="footer__nav__item">
+			<a href="index.html" class="footer__nav__link p2">Home</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="contact.html" class="footer__nav__link p2">Contact</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="catalog.html" class="footer__nav__link p2">Prices</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="about.html" class="footer__nav__link p2">About us</a>
+		</li>
+	</ul>
+
+	<div class="footer__social">
+		<h3 class="footer__title h5">Stay in touch with us</h3>
+		<div class="footer__list-group">
+				<ul class="footer__list">
+					<li class="footer__list__item">
+						<a href="https://twitter.com" class="footer__list__link">
+							<i class="fab fa-lg fa-twitter"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://ru-ru.facebook.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-facebook-f"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.youtube.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-youtube"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://ok.ru/" class="footer__list__link">
+							<i class="fab fa-lg fa-odnoklassniki"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://vk.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-vk"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer__list">	
+					<li class="footer__list__item">
+						<a href="https://telegram.org/" class="footer__list__link">
+							<i class="fab fa-lg fa-telegram"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.instagram.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-instagram"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.tumblr.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-tumblr"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://vimeo.com/" class="footer__list__link">
+							<div class="fab fa-lg fa-vimeo-v"></div>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.quora.com/" class="footer__list__link">
+							<i class="fab fa-quora fa-lg "></i>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</div>
+
+	<address class="footer__address">
+	  <strong class="footer__address__title h6">Pouches.com</strong><br>
+	  <a href="mailto:ramazan.gallyamoff@yandex.ru"
+	  class="footer__address__link p4">ramazan.gallyamoff@yandex.ru</a><br>
+	  <a href="https://www.webdevmaster.ru"
+	  class="footer__address__link p4">www.webdevmaster.ru</a><br>
+	  <p class="footer__address__text p4">600 W. Chicago Ave.</p>
+	  <p class="footer__address__text p4">Suite 620</p>
+	  <p class="footer__address__text p4">Chicago, IL 60654</p>
+	  <p class="footer__address__text p4">USA</p>
+	</address>
+</footer>
+
+
+<script defer src="js/app.min.js"></script>
+
+</body>
+</html>

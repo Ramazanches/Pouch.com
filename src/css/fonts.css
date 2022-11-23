@@ -1,0 +1,52 @@
+@font-face{
+              
+	font-family: Baloo_Chettan_2;
+              
+	font-display: swap;
+              
+	src: url("../fonts/Baloo_Chettan_2.woff2") format("woff2"), url("../fonts/Baloo_Chettan_2.woff") format("woff");
+              
+	font-weight: 400;
+              
+	font-style: normal;
+              
+}
+@font-face{
+              
+	font-family: Edu_VIC_WA_NT_Beginner;
+              
+	font-display: swap;
+              
+	src: url("../fonts/Edu_VIC_WA_NT_Beginner.woff2") format("woff2"), url("../fonts/Edu_VIC_WA_NT_Beginner.woff") format("woff");
+              
+	font-weight: 400;
+              
+	font-style: normal;
+              
+}
+@font-face{
+              
+	font-family: Raleway;
+              
+	font-display: swap;
+              
+	src: url("../fonts/Raleway.woff2") format("woff2"), url("../fonts/Raleway.woff") format("woff");
+              
+	font-weight: 400;
+              
+	font-style: normal;
+              
+}
+@font-face{
+              
+	font-family: Roboto;
+              
+	font-display: swap;
+              
+	src: url("../fonts/Roboto.woff2") format("woff2"), url("../fonts/Roboto.woff") format("woff");
+              
+	font-weight: 400;
+              
+	font-style: normal;
+              
+}

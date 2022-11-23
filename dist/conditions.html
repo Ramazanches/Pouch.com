@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<title>Соглашение о неразглашении</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Various bags, not expensive, wide range of bags, best bags">
+<meta name="keywords" content="">
+<meta name="application-name" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+
+
+<meta property="og:title" content='@@title'>
+
+<meta property="og:description" content="Thousands of different bags">
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="Image description">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="">
+
+<link rel="canonical" href="">
+
+
+<!-- Favicon -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon/all/favicon-48x48.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/all/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/all/favicon-16x16.png">
+
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
+
+<link rel="manifest" href="img/favicon/manifest.json">
+
+<meta name="msapplication-TileColor" content="#da532c">
+
+<meta name="theme-color" content="#ffffff">
+
+
+<!-- Assets -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/style.min.css">
+
+
+
+
+
+</head>
+<body>
+
+<header class="navbar">
+		<div class="navbar__nav">
+
+			<div class="navbar__brand">
+				<a href="index.html" class="navbar__logo">
+					Pouch.com
+				</a>
+			</div>
+			
+			<div class="navbar__contacts-menu">
+				<!-- Contacts -->	
+					<ul class="navbar__contacts"> 
+		<li class="navbar__item _navbar__item" id="localBtn" title="Your city">
+			<small class="navbar__small">Moscow</small>
+			<span class="navbar__icon">
+				<i class="fa fa-location-arrow"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="langBtn" title="Language">
+			<span class="navbar__icon">
+				<i class="fa fa-globe"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="telBtn" title="Phone Number">
+			<span class="navbar__icon">
+				<i class="fa fa-phone"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="mailBtn" title="Email">
+			<span class="navbar__icon">
+				<i class="fa fa-envelope"></i>
+			</span>
+		</li>
+		<li class="navbar__item search" id="search" title="Search">
+			<span class="navbar__icon">
+				<i class="fa fa-search"></i>
+			</span>
+		</li>
+		<li class="navbar__item sign" title="Sign up/in">
+			<a class="navbar__icon" href="signup.html">
+				<i class="fa-solid fa-person-walking-arrow-right"></i>
+			</a>
+		</li>
+	</ul>
+
+	<!-- Basket-button -->
+
+	<div class="navbar__modal-toggler open-modal" data-modal="1">
+		<i class="bi bi-bag-plus" title="ShopCart"></i>
+	</div>
+
+
+				<div id="menuBurger" class="navbar__burger">
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__title">Menu</div>
+				</div>				
+			</div>
+
+			<!-- Location -->		
+			<div id="localModal" class="navbar__location hide">
+	<label for="disabled" class="location__label">Select city</label>
+	<select class="location__select" id="locSelect">
+	</select>
+</div>
+
+<!--select styles path: sass/components/select.sass -->
+
+			<!-- Search line -->	
+			<form class="navbar__search hide">
+				<input class="navbar__search__inp" type="search" name="search" id="search" placeholder="Search">
+				<div class="navbar__search__icon">
+					<a href="" class="navbar__search__link">
+						<i class="fa fa-search"></i>
+					</a>
+				</div>
+			</form>
+
+			<!-- Language -->
+			<div class="navbar__lang lang hide" id="langModal">
+				<p class="lang__text">Choose language:</p>
+				<ul class="lang__list"></ul>
+			</div>
+			<!-- Phone -->  
+					<div id="telModal" class="navbar__phone hide">
+			<p class="phone__text">Contact us:</p>
+			<ul class="phone__list">
+				<li class="phone__item">
+					<a href="tel:+79374994944" class="phone__link">Phone: +79374994944</a>
+				</li>
+				<li class="phone__item">
+					<a href="callto:+79374994944" class="phone__link">Skype: +79374994944</a>
+				</li>
+			</ul>
+		</div>
+
+			<!-- Email -->
+			<div class="navbar__mail hide">
+				<span class="navbar__text">Email us:</span>
+				<a 
+				href="mailto:ramazan.gallyamoff@gmail.com" 
+				class="navbar__link">ramazan.gallyamoff@gmail.com</a>
+			</div>
+
+			<!-- Basket -->
+			
+<!-- Basket-Modal -->
+<div class="navbar__modal-overlay hide" id="overlay"></div>
+
+<div class = "navbar__modal modal__navbar hide" data-modal="1">
+	<div class="modal__basket basket__modal">
+		<div class="basket__close">
+			<span class = "basket__icon modal-close">
+				<small class="basket__text p5">close</small>
+				<i class="bi bi-x-circle basket__i"></i>
+			</span>
+		</div>
+
+		<h2 class="basket__title h2">Welcome!</h2>
+		<h4 class="basket__subtitle p2">We wish you a pleasant shopping!</h4>
+			
+		<ul class="basket__list" id="basketList">
+<!-- 			<li id="basketItem" class="basket__item">
+				<div class="basket__name">
+					<a href="price-content.html" class="basket__product">Product Name 1</a>
+					<p class="basket__brand">Brand Name</p>
+				</div>
+				<div class="basket__amount">
+					<a href="" class="basket__btn" type="submit">Buy</a>
+					<span class="basket__plus" title="more">
+						<i class="bi bi-plus-circle"></i>
+					</span>
+					<span class="basket__minus" title="less">
+						<i class="bi bi-dash-circle"></i>
+					</span>
+					<span class="basket__out" title="amount">1</span>
+					<div class="basket__delete" id="basketItemDel">
+						<i class="fa-solid fa-xmark basket__delete__icon"></i>
+					</div>
+
+				</div>
+			</li> -->
+		</ul>		
+	</div>
+</div>
+
+
+		</div>
+
+		<div class="navbar__menu">
+							<ul class="navbar__desc-menu list" id="navbarDesc">
+					<li class="list__item">
+						<a href="index.html" class="list__link nav">Home</a>
+					</li>
+					<li class="list__item">
+						<a href="contact.html" class="list__link nav">Contacts</a>
+					</li>
+					<li class="list__item">
+						<a href="catalog.html" class="list__link nav">Catalog</a>
+					</li>
+					<li class="list__item _list__item" id="dropdownToggler">
+						<span href="" class="list__link nav">Bags&Backpacks</span>
+						<div class="list__icon"></div>
+
+						<ul class="list__dropdown-desc hide" id="dropdownMenu">
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Accessories for bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Clutches</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Beauticians</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Travel bag</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Folders-bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Portfolios</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Backpacks and satchels</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">For a laptop</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping carts</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<a href="about.html" class="list__link nav">About us</a>
+					</li>
+				</ul>
+
+							<ul class="navbar__mobile-menu list hide" id="menuMobile">
+					<li class="list__item">
+						<a href="index.html" class="list__link">Home</a>
+					</li>
+					<li class="list__item">
+						<a href="contact.html" class="list__link">Contact</a>
+					</li>
+					<li class="list__item">
+						<a href="catalog.html" class="list__link">Prices</a>
+					</li>
+					<li class="list__item _list__item">
+						<span href="" class="list__link" id="dropdown">Bags&Backpacks</span>
+						<div class="list__icon"></div>
+
+						<ul class="list__dropdown-desc hide" id="dropdownMenu">
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Accessories for bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Clutches</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Beauticians</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Travel bag</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Folders-bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Portfolios</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Backpacks and satchels</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">For a laptop</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping carts</a>
+							</li>
+						</ul>
+
+					</li>
+					<li class="navbar__item">
+						<a href="about.html" class="navbar__link">About us</a>
+					</li>
+				</ul>
+		</div>
+
+</header>
+
+
+<main class="condition">
+	<section class="condition__section">
+			<article class="condition__article article">
+				<h1 class="article__title h1">Find more solutions</h1>
+				<form class="article__form" id="" name="" method="get" action="">
+					<input class="article__inp" type="hidden" name="" value="">
+					<input class="article__inp" type="hidden" name="" value="">
+					<input class="article__inp" type="hidden" name="" value="">
+					<input class="article__inp" type="hidden" name="kwHidden" value="true" id="searchPlaceholder">
+					<input class="article__inp" type="hidden" name="" id="">
+					<input class="article__inp" type="hidden" name="" value="">
+				</form>
+			</article>
+
+			<article class="condition__article article">
+				<a class="article__link article_link" href="">Security and Privacy</a>
+				<a class="article__link article_link" href="">Legal Policies</a>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">Conditions of Use</h2>
+				<span class="article__text p2">
+					<strong class="article__strong p1"> Last updated: May 21, 2018</strong>
+				</span>
+			</article>
+
+			<article class="condition__article article">
+				<p class="article__text p2">Welcome to Amazon.com. Amazon.com Services LLC and/or its affiliates ("Amazon") provide website features and other products and services to you when you visit or shop at Amazon.com, use Amazon products or services, use Amazon applications for mobile, or use software provided by Amazon in connection with any of the foregoing (collectively, "Amazon Services"). Amazon provides the Amazon Services subject to the following conditions. </p>
+
+				<h2 class="article__title h2">By using Amazon Services, you agree to these conditions. Please read them carefully.</h2>
+				<p class="article__text p2">We offer a wide range of Amazon Services, and sometimes additional terms may apply. When you use an Amazon Service (for example, Your Profile, Gift Cards, Amazon Video, Your Media Library, Amazon devices, or <a class="article__link" href="" target="_blank">Amazon applications</a>) you also will be subject to the guidelines, terms and agreements applicable to that Amazon Service ("Service Terms"). If these Conditions of Use are inconsistent with the Service Terms, those Service Terms will control.</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">PRIVACY</h2>
+				<p class="article__text p2">Please review our <a class="article__link" href="" target="_blank">Privacy Notice</a>, which also governs your use of Amazon Services, to understand our practices.</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">ELECTRONIC COMMUNICATIONS</h2>
+				<p class="article__text p2">When you use Amazon Services, or send e-mails, text messages, and other communications from your desktop or mobile device to us, you may be communicating with us electronically. You consent to receive communications from us electronically, such as e-mails, texts, mobile push notices, or notices and messages on this site or through the other Amazon Services, such as our Message Center, and you can retain copies of these communications for your records. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.</p>
+			</article>
+
+			<article class="condition__article article">	
+				<h2 class="article__title h2">COPYRIGHT</h2> 
+				<p class="article__text p2">All content included in or made available through any Amazon Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Amazon or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Amazon Service is the exclusive property of Amazon and protected by U.S. and international copyright laws.</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">TRADEMARKS</h2>
+				<p class="article__text p2">
+				<a class="article__link" href="" target="_blank">Click here to see a non-exhaustive list of Amazon trademarks.</a> In addition, graphics, logos, page headers, button icons, scripts, and service names included in or made available through any Amazon Service are trademarks or trade dress of Amazon in the U.S. and other countries. Amazon's trademarks and trade dress may not be used in connection with any product or service that is not Amazon's, in any manner that is likely to cause confusion among customers, or in any manner that disparages or discredits Amazon. All other trademarks not owned by Amazon that appear in any Amazon Service are the property of their respective owners, who may or may not be affiliated with, connected to, or sponsored by Amazon.</p>
+			</article>
+
+			<article class="condition__article article">		
+				<h2 class="article__title h2">PATENTS</h2>
+				<p class="article__text p2">One or more patents owned by Amazon apply to the Amazon Services and to the features and services accessible via the Amazon Services. Portions of the Amazon Services operate under license of one or more patents. <a class="article__link" href="" target="_blank">Click here to see a non-exhaustive list of applicable Amazon patents and applicable licensed patents.</a>
+				</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">LICENSE AND ACCESS</h2>
+				<p class="article__text p2">Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any applicable fees, Amazon or its content providers grant you a limited, non-exclusive, non-transferable, non-sublicensable license to access and make personal and non-commercial use of the Amazon Services. This license does not include any resale or commercial use of any Amazon Service, or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of any Amazon Service or its contents; any downloading, copying, or other use of account information for the benefit of any third party; or any use of data mining, robots, or similar data gathering and extraction tools. All rights not expressly granted to you in these Conditions of Use or any Service Terms are reserved and retained by Amazon or its licensors, suppliers, publishers, rightsholders, or other content providers. No Amazon Service, nor any part of any Amazon Service, may be reproduced, duplicated, copied, sold, resold, visited, or otherwise exploited for any commercial purpose without express written consent of Amazon. You may not frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout, or form) of Amazon without express written consent. You may not use any meta tags or any other "hidden text" utilizing Amazon's name or trademarks without the express written consent of Amazon. You may not misuse the Amazon Services. You may use the Amazon Services only as permitted by law. The licenses granted by Amazon terminate if you do not comply with these Conditions of Use or any Service Terms.</p>
+			</article>
+
+			<article class="condition__article article">				 
+				<h2 class="article__title h2">YOUR ACCOUNT</h2>
+				<p class="article__text p2">You may need your own Amazon account to use certain Amazon Services, and you may be required to be logged in to the account and have a valid payment method associated with it. If there is a problem charging your selected payment method, we may charge any other valid payment method associated with your account. Visit https://www.amazon.com/cpe/managepaymentmethods?ref_=ya_d_c_pmt_mpo&amp; to manage your payment options. You are responsible for maintaining the confidentiality of your account and password and for restricting access to your account, and you agree to accept responsibility for all activities that occur under your account or password. Amazon does sell products for children, but it sells them to adults, who can purchase with a credit card or other permitted payment method. If you are under 18, you may use the Amazon Services only with involvement of a parent or guardian. Parents and guardians may create profiles for teenagers in their Amazon Household. Alcohol listings on Amazon are intended for adults. You must be at least 21 years of age to purchase alcohol, or use any site functionality related to alcohol. Amazon reserves the right to refuse service, terminate accounts, terminate your rights to use Amazon Services, remove or edit content, or cancel orders in its sole discretion.</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">REVIEWS, COMMENTS, COMMUNICATIONS, AND OTHER CONTENT</h2>  
+				<p class="article__text p2">You may post reviews, comments, photos, videos, and other content; send e-cards and other communications; and submit suggestions, ideas, comments, questions, or other information, so long as the content is not illegal, obscene, threatening, defamatory, invasive of privacy, infringing of intellectual property rights (including publicity rights), or otherwise injurious to third parties or objectionable, and does not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of "spam" or unsolicited commercial electronic messages. You may not use a false e-mail address, impersonate any person or entity, or otherwise mislead as to the origin of a card or other content. Amazon reserves the right (but not the obligation) to remove or edit such content, but does not regularly review posted content.</p>
+				 
+				<p class="article__text p2">If you do post content or submit material, and unless we indicate otherwise, you grant Amazon a nonexclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, perform, translate, create derivative works from, distribute, and display such content throughout the world in any media. You grant Amazon and sublicensees the right to use the name that you submit in connection with such content, if they choose. You represent and warrant that you own or otherwise control all of the rights to the content that you post; that the content is accurate; that use of the content you supply does not violate this policy and will not cause injury to any person or entity; and that you will indemnify Amazon for all claims resulting from content you supply. Amazon has the right but not the obligation to monitor and edit or remove any activity or content. Amazon takes no responsibility and assumes no liability for any content posted by you or any third party.</p>
+			</article>
+
+			<article class="condition__article article">						 
+				<h2 class="article__title h2">INTELLECTUAL PROPERTY COMPLAINTS</h2>
+				<p class="article__text p2">Amazon respects the intellectual property of others. If you believe that your intellectual property rights are being infringed, please follow our <a class="article__link" href="">Notice and Procedure for Making Claims of Copyright Infringement</a>.</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">RISK OF LOSS</h2>
+				<p class="article__text p2">All purchases of physical items from Amazon are made pursuant to a shipment contract. This means that the risk of loss and title for such items pass to you upon our delivery to the carrier.</p>
+			</article>	
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">RETURNS, REFUNDS AND TITLE</h2>  
+				<p class="article__text p2">Amazon does not take title to returned items until the item arrives at our fulfillment center. At our discretion, a refund may be issued without requiring a return. In this situation, Amazon does not take title to the refunded item. For more information about our returns and refunds, please see our <a class="article__link" href="" target="_blank">Returns Center</a> .</p>
+			</article>	
+
+			<article class="condition__article article">					 
+				<h2 class="article__title h2">PRODUCT DESCRIPTIONS</h2>
+				<p class="article__text p2">Amazon attempts to be as accurate as possible. However, Amazon does not warrant that product descriptions or other content of any Amazon Service is accurate, complete, reliable, current, or error-free. If a product offered by Amazon itself is not as described, your sole remedy is to return it in unused condition. </p>
+			</article>
+
+			<article class="condition__article article">			
+				<h2 class="article__title h2">PRICING</h2>  
+				<p class="article__text p2">"List Price" means the suggested retail price of a product as provided by a manufacturer, supplier, or seller. We regularly check List Prices against prices recently found on Amazon and other retailers. Certain products may have a "Was Price" displayed, which is determined using recent price history of the product on Amazon.</p>
+	
+
+			<p class="article__text p2">With respect to items sold by Amazon, we cannot confirm the price of an item until you order. Despite our best efforts, a small number of the items in our catalog may be mispriced. If the correct price of an item sold by Amazon is higher than our stated price, we will, at our discretion, either contact you for instructions before shipping or cancel your order and notify you of such cancellation. Other merchants may follow different policies in the event of a mispriced item. </p>
+			 
+			<p class="article__text p2">We generally do not charge your credit card until after your order has entered the shipping process or, for digital products, until we make the digital product available to you.</p>
+			</article>	
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">APP PERMISSIONS</h2>
+				<p class="article__text p2">When you use apps created by Amazon, such as the Amazon App or Kindle App, you may grant certain permissions to us for your device. Most mobile devices provide you with information about these permissions. To learn more about these permissions, <a class="article__link" href="" target="_blank">click here</a> .</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">SANCTIONS AND EXPORT POLICY</h2>
+				<p class="article__text p2">You may not use any Amazon Service if you are the subject of U.S. sanctions or of sanctions consistent with U.S. law imposed by the governments of the country where you are using Amazon Services. You must comply with all U.S. or other export and re-export restrictions that may apply to goods, software (including Amazon Software), technology, and services.</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">OTHER BUSINESSES</h2>
+				<p class="article__text p2">Parties other than Amazon operate stores, provide services or software, or sell product lines through the Amazon Services. In addition, we provide links to the sites of affiliated companies and certain other businesses. If you purchase any of the products or services offered by these businesses or individuals, you are purchasing directly from those third parties, not from Amazon. We are not responsible for examining or evaluating, and we do not warrant, the offerings of any of these businesses or individuals (including the content of their Web sites). Amazon does not assume any responsibility or liability for the actions, product, and content of all these and any other third parties. You should carefully review their privacy statements and other conditions of use. </p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h3">DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY</h2> 
+				<p class="article__text p3">THE AMAZON SERVICES AND ALL INFORMATION, CONTENT, MATERIALS, PRODUCTS (INCLUDING SOFTWARE) AND OTHER SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THE AMAZON SERVICES ARE PROVIDED BY AMAZON ON AN "AS IS" AND "AS AVAILABLE" BASIS, UNLESS OTHERWISE SPECIFIED IN WRITING. AMAZON MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THE AMAZON SERVICES, OR THE INFORMATION, CONTENT, MATERIALS, PRODUCTS (INCLUDING SOFTWARE) OR OTHER SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THE AMAZON SERVICES, UNLESS OTHERWISE SPECIFIED IN WRITING. YOU EXPRESSLY AGREE THAT YOUR USE OF THE AMAZON SERVICES IS AT YOUR SOLE RISK.</p>
+				 
+				<p class="article__text p3">TO THE FULL EXTENT PERMISSIBLE BY LAW, AMAZON DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. AMAZON DOES NOT WARRANT THAT THE AMAZON SERVICES, INFORMATION, CONTENT, MATERIALS, PRODUCTS (INCLUDING SOFTWARE) OR OTHER SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THE AMAZON SERVICES, AMAZON'S SERVERS OR ELECTRONIC COMMUNICATIONS SENT FROM AMAZON ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. TO THE FULL EXTENT PERMISSIBLE BY LAW, AMAZON WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND ARISING FROM THE USE OF ANY AMAZON SERVICE, OR FROM ANY INFORMATION, CONTENT, MATERIALS, PRODUCTS (INCLUDING SOFTWARE) OR OTHER SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH ANY AMAZON SERVICE, INCLUDING, BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, AND CONSEQUENTIAL DAMAGES, UNLESS OTHERWISE SPECIFIED IN WRITING.</p>
+			</article>		
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">DISPUTES</h2>
+				<p class="article__text p2"><strong>Any dispute or claim relating in any way to your use of any Amazon Service, or to any products or services sold or distributed by Amazon or through Amazon.com will be resolved by binding arbitration, rather than in court</strong>, except that you may assert claims in small claims court if your claims qualify. The Federal Arbitration Act and federal arbitration law apply to this agreement.</p>
+				 
+				<p class="article__text p2"><strong>There is no judge or jury in arbitration, and court review of an arbitration award is limited. However, an arbitrator can award on an individual basis the same damages and relief as a court (including injunctive and declaratory relief or statutory damages), and must follow the terms of these Conditions of Use as a court would.</strong>
+				</p>
+				 
+				<p class="article__text p2">To begin an arbitration proceeding, you must send a letter requesting arbitration and describing your claim to our registered agent Corporation Service Company, 300 Deschutes Way SW, Suite 208 MC-CSC1, Tumwater, WA 98501. The arbitration will be conducted by the American Arbitration Association (AAA) under its rules, including the AAA's Supplementary Procedures for Consumer-Related Disputes. The AAA's rules are available at www.adr.org or by calling 1-800-778-7879. Payment of all filing, administration and arbitrator fees will be governed by the AAA's rules. We will reimburse those fees for claims totaling less than $10,000 unless the arbitrator determines the claims are frivolous. Likewise, Amazon will not seek attorneys' fees and costs in arbitration unless the arbitrator determines the claims are frivolous. You may choose to have the arbitration conducted by telephone, based on written submissions, or in person in the county where you live or at another mutually agreed location.</p>
+				 
+				<p class="article__text p2"><strong class="article__strong p1">We each agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated or representative action.</strong> If for any reason a claim proceeds in court rather than in arbitration <strong>we each waive any right to a jury trial</strong>. We also both agree that you or we may bring suit in court to enjoin infringement or other misuse of intellectual property rights.</p>
+			</article>		
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">APPLICABLE LAW</h2>  
+				<p class="article__text p2">By using any Amazon Service, you agree that the Federal Arbitration Act, applicable federal law, and the laws of the state of Washington, without regard to principles of conflict of laws, will govern these Conditions of Use and any dispute of any sort that might arise between you and Amazon.</p>
+			</article> 
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">SITE POLICIES, MODIFICATION, AND SEVERABILITY</h2>
+				<p class="article__text p2">Please review our other policies, such as our <a class="article__link" target="_blank">pricing policy</a>, posted on this site. These policies also govern your use of Amazon Services. We reserve the right to make changes to our site, policies, Service Terms, and these Conditions of Use at any time. If any of these conditions shall be deemed invalid, void, or for any reason unenforceable, that condition shall be deemed severable and shall not affect the validity and enforceability of any remaining condition.</p>
+			</article>
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">OUR ADDRESS</h2> 
+				<p class="article__text p2">Bagpack.com, Inc.
+				<p class="article__text p2-pre">
+					P.O. Box 81226
+					Seattle, WA 98108-1226
+				</p>
+
+				<a class="article__link" href="" target="_blank">https://bagpack.com</a> 
+			</article>	
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">ADDITIONAL AMAZON SOFTWARE TERMS</h2> 
+				<p class="article__text p2">The following terms (“Software Terms”) apply to any software (including any updates or upgrades to the software) and any related documentation we make available to you in connection with Amazon Services (the "Amazon Software"). 
+				</p>
+			</article>
+
+			<ol class="condition__list-num list">
+				<li class="list__item">
+					<span class="list__text p2"><strong class="list__strong"> Use of the Amazon Software.</strong> You may use Amazon Software solely for purposes of enabling you to use the Amazon Services as provided by Amazon, and as permitted by these Conditions of Use and any Service Terms. You may not incorporate any portion of the Amazon Software into other programs or compile any portion of it in combination with other programs, or otherwise copy (except to exercise rights granted in this section), modify, create derivative works of, distribute, assign any rights to, or license the Amazon Software in whole or in part. All software used in any Amazon Service is the property of Amazon or its software suppliers and is protected by United States and international copyright laws.</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2"><strong class="list__strong">Use of Third Party Services.</strong> When you use the Amazon Software, you may also be using the services of one or more third parties, such as a wireless carrier or a mobile software provider. Your use of these third party services may be subject to the separate policies, terms of use, and fees of these third parties.</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2"><strong class="list__strong">No Reverse Engineering.</strong> You may not reverse engineer, decompile or disassemble, tamper with, or bypass any security associated with the Amazon Software, whether in whole or in part.</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2"><strong class="list__strong">Updates.</strong> We may offer automatic or manual updates to the Amazon Software at any time and without notice to you.</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2"><strong class="list__strong">Government End Users.</strong> If you are a U.S. Government end user, we are licensing the Amazon Software to you as a "Commercial Item" as that term is defined in the U.S. Code of Federal Regulations (see 48 C.F.R. § 2.101), and the rights we grant you to the Amazon Software are the same as the rights we grant to all others under these Conditions of Use.</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2"><strong class="list__strong">Conflicts.</strong> In the event of any conflict between these Conditions of Use and any other Amazon or third-party terms applicable to any portion of Amazon Software, such as open-source license terms, such other terms will control as to that portion of the Amazon Software and to the extent of the conflict.
+					</span>
+				</li>
+			</ol>
+
+			<article class="condition__article article">		 
+				<h2 class="article__title h2">HOW TO SERVE A SUBPOENA OR OTHER LEGAL PROCESS</h2>
+				<p class="article__text p2">Amazon accepts service of subpoenas or other legal process only through Amazon’s national registered agent, Corporation Service Company (CSC). Subpoenas or other legal process may be served by sending them to CSC at the following address:</p>
+				<p class="article__text-pre p1">Amazon.com, Inc.
+				Corporation Service Company
+				300 Deschutes Way SW, Suite 208 MC-CSC1
+				Tumwater, WA 98501
+				Attn: Legal Department – Legal Process</p>
+				<p class="article__text p2">Please note also that providing detailed and accurate information at the outset will facilitate efficient processing of your request. That information will include, for example, e-mail and/or credit card number used to make purchases for retail purchase information; the name, e-mail, and physical address of a seller for seller information; device serial number for Amazon devices; and IP address and complete time stamps.</p>
+			</article>	
+
+			<article class="condition__article article">
+				<h2 class="article__title h2">NOTICE AND PROCEDURE FOR MAKING CLAIMS OF INTELLECTUAL PROPERTY INFRINGEMENT</h2>
+				<p class="article__text p2">If you believe that your intellectual property rights have been infringed, please submit your complaint using our online <a class="article__link" target="_blank">form</a>. This form may be used to report all types of intellectual property claims including, but not limited to, copyright, trademark, and patent claims.</p>
+				<p class="article__text p2">We respond quickly to the concerns of rights owners about any alleged infringement, and we terminate repeat infringers in appropriate circumstances.</p>
+				<p class="article__text p2">We offer the following alternative to our online form for copyright complaints only. You may submit written claims of copyright infringement to our Copyright Agent at:</p>
+				<p class="article__text-pre p1">
+					Copyright Agent
+					Amazon.com Legal Department
+					P.O. Box 81226
+					Seattle, WA 98108
+					phone: (206) 266-4064
+					e-mail: copyright@amazon.com
+
+					Courier address:
+					Copyright Agent
+					Amazon.com Legal Department
+					2021 7th Avenue
+					Seattle, WA 98121
+					USA
+				</p>
+				<p class="article__text p2">Written claims concerning copyright infringement must include the following information:</p>
+			</article>
+
+			<ul class="condition__list list__condition">
+				<li class="list__item">
+					<span class="list__text p2">A physical or electronic signature of the person authorized to act on behalf of the owner of the copyright interest;</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2">A description of the copyrighted work that you claim has been infringed upon;</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2">A description of where the material that you claim is infringing is located on the site;</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2">Your address, telephone number, and e-mail address;</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2">A statement by you that you have a good-faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and</span>
+				</li>
+				<li class="list__item">
+					<span class="list__text p2">A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf.</span>
+				</li>
+			</ul>
+		</div>
+	</section>                                                                                            
+</main>
+
+<footer class="footer">
+	<ul class="footer__nav">
+		<li class="footer__nav__item">
+			<a href="index.html" class="footer__nav__link p2">Home</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="contact.html" class="footer__nav__link p2">Contact</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="catalog.html" class="footer__nav__link p2">Prices</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="about.html" class="footer__nav__link p2">About us</a>
+		</li>
+	</ul>
+
+	<div class="footer__social">
+		<h3 class="footer__title h5">Stay in touch with us</h3>
+		<div class="footer__list-group">
+				<ul class="footer__list">
+					<li class="footer__list__item">
+						<a href="https://twitter.com" class="footer__list__link">
+							<i class="fab fa-lg fa-twitter"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://ru-ru.facebook.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-facebook-f"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.youtube.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-youtube"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://ok.ru/" class="footer__list__link">
+							<i class="fab fa-lg fa-odnoklassniki"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://vk.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-vk"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer__list">	
+					<li class="footer__list__item">
+						<a href="https://telegram.org/" class="footer__list__link">
+							<i class="fab fa-lg fa-telegram"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.instagram.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-instagram"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.tumblr.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-tumblr"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://vimeo.com/" class="footer__list__link">
+							<div class="fab fa-lg fa-vimeo-v"></div>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.quora.com/" class="footer__list__link">
+							<i class="fab fa-quora fa-lg "></i>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</div>
+
+	<address class="footer__address">
+	  <strong class="footer__address__title h6">Pouches.com</strong><br>
+	  <a href="mailto:ramazan.gallyamoff@yandex.ru"
+	  class="footer__address__link p4">ramazan.gallyamoff@yandex.ru</a><br>
+	  <a href="https://www.webdevmaster.ru"
+	  class="footer__address__link p4">www.webdevmaster.ru</a><br>
+	  <p class="footer__address__text p4">600 W. Chicago Ave.</p>
+	  <p class="footer__address__text p4">Suite 620</p>
+	  <p class="footer__address__text p4">Chicago, IL 60654</p>
+	  <p class="footer__address__text p4">USA</p>
+	</address>
+</footer>
+
+
+<script defer src="js/app.min.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<title>Товары</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Various bags, not expensive, wide range of bags, best bags">
+<meta name="keywords" content="">
+<meta name="application-name" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+
+
+<meta property="og:title" content='@@title'>
+
+<meta property="og:description" content="Thousands of different bags">
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="Image description">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="">
+
+<link rel="canonical" href="">
+
+
+<!-- Favicon -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon/all/favicon-48x48.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/all/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/all/favicon-16x16.png">
+
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
+
+<link rel="manifest" href="img/favicon/manifest.json">
+
+<meta name="msapplication-TileColor" content="#da532c">
+
+<meta name="theme-color" content="#ffffff">
+
+
+<!-- Assets -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/style.min.css">
+
+
+
+
+
+</head>
+<body>
+
+<header class="navbar">
+		<div class="navbar__nav">
+
+			<div class="navbar__brand">
+				<a href="index.html" class="navbar__logo">
+					Pouch.com
+				</a>
+			</div>
+			
+			<div class="navbar__contacts-menu">
+				<!-- Contacts -->	
+					<ul class="navbar__contacts"> 
+		<li class="navbar__item _navbar__item" id="localBtn" title="Your city">
+			<small class="navbar__small">Moscow</small>
+			<span class="navbar__icon">
+				<i class="fa fa-location-arrow"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="langBtn" title="Language">
+			<span class="navbar__icon">
+				<i class="fa fa-globe"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="telBtn" title="Phone Number">
+			<span class="navbar__icon">
+				<i class="fa fa-phone"></i>
+			</span>
+		</li>
+		<li class="navbar__item" id="mailBtn" title="Email">
+			<span class="navbar__icon">
+				<i class="fa fa-envelope"></i>
+			</span>
+		</li>
+		<li class="navbar__item search" id="search" title="Search">
+			<span class="navbar__icon">
+				<i class="fa fa-search"></i>
+			</span>
+		</li>
+		<li class="navbar__item sign" title="Sign up/in">
+			<a class="navbar__icon" href="signup.html">
+				<i class="fa-solid fa-person-walking-arrow-right"></i>
+			</a>
+		</li>
+	</ul>
+
+	<!-- Basket-button -->
+
+	<div class="navbar__modal-toggler open-modal" data-modal="1">
+		<i class="bi bi-bag-plus" title="ShopCart"></i>
+	</div>
+
+
+				<div id="menuBurger" class="navbar__burger">
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__title">Menu</div>
+				</div>				
+			</div>
+
+			<!-- Location -->		
+			<div id="localModal" class="navbar__location hide">
+	<label for="disabled" class="location__label">Select city</label>
+	<select class="location__select" id="locSelect">
+	</select>
+</div>
+
+<!--select styles path: sass/components/select.sass -->
+
+			<!-- Search line -->	
+			<form class="navbar__search hide">
+				<input class="navbar__search__inp" type="search" name="search" id="search" placeholder="Search">
+				<div class="navbar__search__icon">
+					<a href="" class="navbar__search__link">
+						<i class="fa fa-search"></i>
+					</a>
+				</div>
+			</form>
+
+			<!-- Language -->
+			<div class="navbar__lang lang hide" id="langModal">
+				<p class="lang__text">Choose language:</p>
+				<ul class="lang__list"></ul>
+			</div>
+			<!-- Phone -->  
+					<div id="telModal" class="navbar__phone hide">
+			<p class="phone__text">Contact us:</p>
+			<ul class="phone__list">
+				<li class="phone__item">
+					<a href="tel:+79374994944" class="phone__link">Phone: +79374994944</a>
+				</li>
+				<li class="phone__item">
+					<a href="callto:+79374994944" class="phone__link">Skype: +79374994944</a>
+				</li>
+			</ul>
+		</div>
+
+			<!-- Email -->
+			<div class="navbar__mail hide">
+				<span class="navbar__text">Email us:</span>
+				<a 
+				href="mailto:ramazan.gallyamoff@gmail.com" 
+				class="navbar__link">ramazan.gallyamoff@gmail.com</a>
+			</div>
+
+			<!-- Basket -->
+			
+<!-- Basket-Modal -->
+<div class="navbar__modal-overlay hide" id="overlay"></div>
+
+<div class = "navbar__modal modal__navbar hide" data-modal="1">
+	<div class="modal__basket basket__modal">
+		<div class="basket__close">
+			<span class = "basket__icon modal-close">
+				<small class="basket__text p5">close</small>
+				<i class="bi bi-x-circle basket__i"></i>
+			</span>
+		</div>
+
+		<h2 class="basket__title h2">Welcome!</h2>
+		<h4 class="basket__subtitle p2">We wish you a pleasant shopping!</h4>
+			
+		<ul class="basket__list" id="basketList">
+<!-- 			<li id="basketItem" class="basket__item">
+				<div class="basket__name">
+					<a href="price-content.html" class="basket__product">Product Name 1</a>
+					<p class="basket__brand">Brand Name</p>
+				</div>
+				<div class="basket__amount">
+					<a href="" class="basket__btn" type="submit">Buy</a>
+					<span class="basket__plus" title="more">
+						<i class="bi bi-plus-circle"></i>
+					</span>
+					<span class="basket__minus" title="less">
+						<i class="bi bi-dash-circle"></i>
+					</span>
+					<span class="basket__out" title="amount">1</span>
+					<div class="basket__delete" id="basketItemDel">
+						<i class="fa-solid fa-xmark basket__delete__icon"></i>
+					</div>
+
+				</div>
+			</li> -->
+		</ul>		
+	</div>
+</div>
+
+
+		</div>
+
+		<div class="navbar__menu">
+							<ul class="navbar__desc-menu list" id="navbarDesc">
+					<li class="list__item">
+						<a href="index.html" class="list__link nav">Home</a>
+					</li>
+					<li class="list__item">
+						<a href="contact.html" class="list__link nav">Contacts</a>
+					</li>
+					<li class="list__item">
+						<a href="catalog.html" class="list__link nav">Catalog</a>
+					</li>
+					<li class="list__item _list__item" id="dropdownToggler">
+						<span href="" class="list__link nav">Bags&Backpacks</span>
+						<div class="list__icon"></div>
+
+						<ul class="list__dropdown-desc hide" id="dropdownMenu">
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Accessories for bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Clutches</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Beauticians</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Travel bag</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Folders-bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Portfolios</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Backpacks and satchels</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">For a laptop</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping carts</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<a href="about.html" class="list__link nav">About us</a>
+					</li>
+				</ul>
+
+							<ul class="navbar__mobile-menu list hide" id="menuMobile">
+					<li class="list__item">
+						<a href="index.html" class="list__link">Home</a>
+					</li>
+					<li class="list__item">
+						<a href="contact.html" class="list__link">Contact</a>
+					</li>
+					<li class="list__item">
+						<a href="catalog.html" class="list__link">Prices</a>
+					</li>
+					<li class="list__item _list__item">
+						<span href="" class="list__link" id="dropdown">Bags&Backpacks</span>
+						<div class="list__icon"></div>
+
+						<ul class="list__dropdown-desc hide" id="dropdownMenu">
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Accessories for bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Clutches</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Beauticians</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Travel bag</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Folders-bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Portfolios</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Backpacks and satchels</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">For a laptop</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping bags</a>
+							</li>
+							<li class="dropdown__item">
+								<a href="catalog.html" class="dropdown__link">Shopping carts</a>
+							</li>
+						</ul>
+
+					</li>
+					<li class="navbar__item">
+						<a href="about.html" class="navbar__link">About us</a>
+					</li>
+				</ul>
+		</div>
+
+</header>
+
+
+<main class="catalog" id="priceContentId">
+
+  <aside class="catalog__sidebar" id="sidebar">
+    <h1 class="catalog__sidebar__title">Bags and backpacks</h1>
+    <ul class="catalog__sidebar__list">
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Bag Accessories</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Clutches</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Cosmetic bags</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Travel Bags</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Folders</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Portfolios</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Backpacks</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Bags</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Laptop</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Shopping bags</a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__link" target="_blank">Trolleys</a>
+      </li>
+    </ul>
+    <hr>
+    <section class="catalog__sidebar__brands">
+      <h2 class="brands__title h5">Brands</h2>
+      <div class="brands__search">
+        <input class="brands__search__inp" type="search" placeholder="I am looking for...">
+      </div>
+
+      <ul class="brands__list list">
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">&Atrendo</span>    
+          <span class="list__quality">(84)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">-PARADOX-</span>    
+          <span class="list__quality">(62)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">-RESTAXE-</span>    
+          <span class="list__quality">(15)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">-The Golden Tenet</span>    
+          <span class="list__quality">(10)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">.Disney.</span>    
+          <span class="list__quality">(1)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">0market</span>    
+          <span class="list__quality">(1)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">1 LOVE</span>    
+          <span class="list__quality">(39)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">1 ONFART</span>    
+          <span class="list__quality">(5)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">1000 Каталог</span>    
+          <span class="list__quality">(46)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">1000 Мелочей</span>    
+          <span class="list__quality"></span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">10TEN</span>    
+          <span class="list__quality">(5)</span>
+        </li>
+        <li class="list__item">
+          <input class="list__inp" type="checkbox" name="">
+          <span class="list__brand">12Pears</span>    
+          <span class="list__quality">(3)</span>
+        </li>
+      </ul> 
+    </section>
+
+    <section class="catalog__sidebar__filter">
+      <h2 class="filter__title h5">Prices</h2>
+      <div class="filter__wrapper">
+        <label class="filter__label" for="from">
+          <span class="filter__span">from</span>
+
+          <input class="filter__inp" 
+          type="number" 
+          min="0" 
+          value="0" 
+          name="" 
+          id="from">
+
+          <input class="filter__inp" 
+          type="range" 
+          min="0" 
+          max="10000" 
+          step="" 
+          value="0" 
+          name="" 
+          id="lrng" /> 
+        </label>        
+
+        <label class="filter__label" for="to">
+          <span class="filter__span">to</span>
+
+          <input class="filter__inp" 
+          type="number" 
+          min="0" 
+          value="0" 
+          name="" 
+          id="to">
+
+          <input class="filter__inp" 
+          type="range" 
+          min="0" 
+          max="10000" 
+          step="" 
+          value="0" 
+          name="" 
+          id="rrng"/>
+        </label> 
+      </div>
+    </section>
+
+    <section class="catalog__sidebar__discount discount">
+        <h2 class="discount__title h5">Discounts</h2>
+        <form class="discount__form" action="">
+          <div class="discount__list">
+            <p class="discount__item">
+              <input class="discount__inp" type="radio" name="" id="ten">
+              <span class="discount__span">10% and more</span>
+            </p>
+            <p class="discount__item">
+              <input class="discount__inp" type="radio" name="" id="thirty">
+              <span class="discount__span">30% and more</span>
+            </p>
+            <p class="discount__item">
+              <input class="discount__inp" type="radio" name="" id="fifty">
+              <span class="discount__span">50% and more</span>
+            </p>
+            <p class="discount__item">
+              <input class="discount__inp" type="radio" name="" id="seventy">
+              <span class="discount__span">70% and more</span>
+            </p>
+          </div>
+          <button class="discount__reset" type="reset">reset</button>
+        </form>
+    </section>
+  </aside>
+
+  <section class="catalog__section" id="articlePrice">
+    <nav class="catalog__section__sort" id="navSort">
+      <h3 class="sort__title h6">Sort by:</h3>
+      	<div class="sort__buttons">
+    			<button class="sort__btn" type="button" id="sortRating">Rating</button>
+    			<button class="sort__btn" type="button" id="sortAsc">Ascending price</button>
+    	    <button class="sort__btn" type="button" id="sortDesc">By price reduction</button>
+    	    <button class="sort__btn" type="button" id="sortDiscount">Discount</button>
+      	</div>
+    </nav>
+
+    <div class="catalog__section__gallery gallery">
+      <div class="gallery__list"></div>
+    </div>
+  </section>
+<!-- <nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item"><a href="#" class="page-link" aria-label="Previous" tabindex="-1">Previous</a></li>
+    <li class="page-item"><a href="#" class="page-link">1</a></li>
+    <li class="page-item active"><a href="#" class="page-link">2</a></li>
+    <li class="page-item"><a href="#" class="page-link">3</a></li>
+    <li class="page-item"><a href="#" class="page-link">4</a></li>
+    <li class="page-item"><a href="#" class="page-link" aria-label="Next">Next</a></li>
+  </ul>
+</nav> -->
+</main>
+
+<footer class="footer">
+	<ul class="footer__nav">
+		<li class="footer__nav__item">
+			<a href="index.html" class="footer__nav__link p2">Home</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="contact.html" class="footer__nav__link p2">Contact</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="catalog.html" class="footer__nav__link p2">Prices</a>
+		</li>
+		<li class="footer__nav__item">
+			<a href="about.html" class="footer__nav__link p2">About us</a>
+		</li>
+	</ul>
+
+	<div class="footer__social">
+		<h3 class="footer__title h5">Stay in touch with us</h3>
+		<div class="footer__list-group">
+				<ul class="footer__list">
+					<li class="footer__list__item">
+						<a href="https://twitter.com" class="footer__list__link">
+							<i class="fab fa-lg fa-twitter"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://ru-ru.facebook.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-facebook-f"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.youtube.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-youtube"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://ok.ru/" class="footer__list__link">
+							<i class="fab fa-lg fa-odnoklassniki"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://vk.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-vk"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer__list">	
+					<li class="footer__list__item">
+						<a href="https://telegram.org/" class="footer__list__link">
+							<i class="fab fa-lg fa-telegram"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.instagram.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-instagram"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.tumblr.com/" class="footer__list__link">
+							<i class="fab fa-lg fa-tumblr"></i>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://vimeo.com/" class="footer__list__link">
+							<div class="fab fa-lg fa-vimeo-v"></div>
+						</a>
+					</li>
+					<li class="footer__list__item">
+						<a href="https://www.quora.com/" class="footer__list__link">
+							<i class="fab fa-quora fa-lg "></i>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</div>
+
+	<address class="footer__address">
+	  <strong class="footer__address__title h6">Pouches.com</strong><br>
+	  <a href="mailto:ramazan.gallyamoff@yandex.ru"
+	  class="footer__address__link p4">ramazan.gallyamoff@yandex.ru</a><br>
+	  <a href="https://www.webdevmaster.ru"
+	  class="footer__address__link p4">www.webdevmaster.ru</a><br>
+	  <p class="footer__address__text p4">600 W. Chicago Ave.</p>
+	  <p class="footer__address__text p4">Suite 620</p>
+	  <p class="footer__address__text p4">Chicago, IL 60654</p>
+	  <p class="footer__address__text p4">USA</p>
+	</address>
+</footer>
+
+
+<script defer src="js/app.min.js"></script>
+
+</body>
+</html>
