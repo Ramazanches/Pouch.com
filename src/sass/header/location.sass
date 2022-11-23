@@ -1,0 +1,37 @@
+@import '../modules/base'
+@import '../modules/mixins'  
+      
+.navbar__location
+  position: absolute
+  z-index: 9
+  padding: 30px 10px 10px 25px
+  min-width: 280px
+  background: #fff
+  text-align: center
+  display: flex
+  flex-direction: column  
+  row-gap: 10px
+  border-radius: 3px
+
+  .location__label
+    color: $darkblue
+    white-space: nowrap
+    text-align: left
+
+  .location__select
+    width: 100%
+    border: none
+    padding: 7px 5px 7px 0
+    color: $gray
+    font-family: $ral
+    background: #fff
+    cursor: pointer
+    &:hover
+      border-color: #888
+    &:focus
+      border-color: $darkblue 
+
+    .location__option
+      display: flex
+      position: relative
+      width: 100%

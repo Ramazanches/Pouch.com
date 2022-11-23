@@ -1,0 +1,91 @@
+@import '../modules/base'
+@import '../modules/mixins'
+
+.navbar__lang
+  position: absolute
+  z-index: 9
+  top: 100%
+  left: 1px
+  background: #fff
+  padding: 7px 7px 0 7px
+  border-radius: 2px
+  display: flex
+  animation: langFadeOut 0.5s ease forwards
+
+  @keyframes langFadeOut
+    from
+      opacity: 1
+      left: 1px
+      display: flex
+    to
+      opacity: 0
+      left: -400px
+      display: none
+.lang
+  position: absolute
+  z-index: 9
+  top: 100%
+  left: 1px
+  background: #fff
+  padding: $inner calc($inner + 5px) $inner calc($inner + 5px)
+  border-radius: 3px
+  display: flex
+  animation: langFadeIn 0.5s ease
+
+  @keyframes langFadeIn
+    from
+      left: -400px
+      opacity: 0
+    to
+      left: 1px
+      opacity: 1
+
+  @media screen and (max-width: 768px)
+    top: 110%
+
+  .lang__text
+    position: relative
+    z-index: 9
+    color: $darkblue
+    padding: 0 4px
+    border-radius: 1px
+    font-family: $roboto
+    font-size: 14px
+    white-space: pre
+    height: 25px
+    display: flex
+    align-items: center
+
+  .lang__list
+    width: 50%
+    position: relative
+    z-index: 9
+    padding: 0
+    display: flex
+    flex-direction: column
+
+    .lang__item
+      position: relative
+      padding: 0 4px
+      width: 100%      
+      height: 25px
+      display: flex
+      flex-wrap: nowrap
+      align-items: center
+      border: 1px solid transparent
+
+      &:hover
+        text-decoration: underline
+
+      .lang__link
+        color: $darkblue
+        text-decoration: none
+        font-family: $roboto
+        font-size: 13px
+        width: 100%
+        height: 100%
+        white-space: pre
+        display: flex
+        flex-wrap: nowrap
+        flex-direction: row
+        align-items: flex-start  

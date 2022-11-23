@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head/head.html', {
+	"title": "Регистрация"
+})
+@@include('html/header/header.html')
+<main class="signup">
+	<div class="signup__wrapper">
+	  <h3 class="signup__title">Sign Up</h3>
+		<form class="signup__form" enctype="text/plain">
+			  <ul class="signup__list">
+			    <li class="signup__item">
+			      <label class="signup__label"><i class="bi bi-person"></i></label>
+			      <input  class="signup__inp" type="text" name="firstname" placeholder="Firstname" required>
+			    </li>
+			    <li class="signup__item">
+			      <label class="signup__label"><i class="bi bi-person-fill"></i></label>
+			      <input  class="signup__inp" type="text" name="lastname" placeholder="Lastname" required>
+			    </li>
+			    <li class="signup__item">
+			      <label class="signup__label"><i class="bi bi-emoji-smile"></i></label>
+			      <input  class="signup__inp" type="text" name="townborn" placeholder="Townborn" required>
+			    </li>
+			    <li class="signup__item">
+			      <label class="signup__label"><i class="bi bi-envelope-fill"></i></label>
+			      <input  class="signup__inp" type="email" name="email" placeholder="Email" required>
+			    </li>
+			    <li class="signup__item">
+			      <label class="signup__label"><i class="bi bi-telephone-fill"></i></label>
+			      <input  class="signup__inp" type="tel" name="phone" placeholder="Phone" required>
+			    </li>
+			    <li class="signup__item">
+			      <label class="signup__label"><i class="bi bi-door-open"></i></label>
+			      <input  class="signup__inp" type="password" name="password" placeholder="Password" required>
+			    </li>
+			    <li class="signup__item">
+			      <label class="signup__label"><i class="bi bi-door-open-fill"></i></label>
+			      <input  class="signup__inp" type="password" name="password_confirm" placeholder="Password_confirm" required>
+			    </li>
+			    <li class="signup__item">
+			      <button class="signup__btn" type="submit">Sign Up</button>
+			    </li>
+			  </ul>
+			</form>	
+	</div>
+	<div class="signup__footer">
+		<p class="signup__conditions">Already Registered?<a href="signin.html" class="signup__link">Login</a> to your account</p>
+
+		<p class="signup__conditions">By continuing, you agree to BagPack <a href="conditions.html" class="signup__link">Conditions of Use</a> and <a href="privacy.html" class="signup__link">Privacy Notice</a>.</p>		
+	</div>
+
+</main>
+@@include('html/footer.html')

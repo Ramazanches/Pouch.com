@@ -1,0 +1,184 @@
+/*universal classes*/
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.txt-ind {
+	text-indent: 0.5em;
+}
+
+.dropdown_on {
+	animation: openMenu 700ms ease;
+	clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+	z-index: 2;
+}
+
+	@keyframes openMenu {
+		0% { clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);}
+		100% { 	clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);}
+}
+
+.dropdown_off {
+	animation: closeMenu 200ms ease;
+}
+	@keyframes closeMenu {
+		0% { clip-path: polygon(100% 0, 100% 100%, 0 100%, 0% 0);}
+		100% { clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);}
+}
+.transRight {
+	left: 0;	
+	animation: transRight .5s ease;
+}
+	@keyframes transRight {
+		from { left: 100vw; }
+		to { left: 0; }		
+}
+.transRightBack {
+	left: 100vw;
+	animation: transRightBack .5s ease;
+}
+	@keyframes transRightBack {
+		from { left: 0; }
+		to { left: 100vw; }
+}
+
+.transLeft {
+	animation: transLeft .4s ease;
+	transform: translateX(100vw);
+}
+	@keyframes transLeft {
+		from { transform: translateX(100vw);}
+		to { transform: translateX(-100vw);}
+}
+.transLeftBack {
+	animation: transLeftBack .4s ease;
+	transform: translateX(0);
+}
+	@keyframes transLeftBack {
+		from { transform: translateX(-100vw);}
+		to { transform: translateX(0);}
+}
+
+.transTop {
+	animation: transTop .4s ease;
+	transform: translateY(100vh);
+}
+	@keyframes transTop {
+		from { transform: translateY(0);}
+		to { transform: translateY(100vh);}
+}
+
+.transTopBack {
+	animation: transTopBack .4s ease;
+	transform: translateY(0);
+}
+	@keyframes transTopBack {
+		from { transform: translateY(100vh);}
+		to { transform: translateY(0);}
+}
+
+.transBottom {
+	animation: transBottom .4s ease;
+	transform: translateY(100vh);
+}
+	@keyframes transBottom {
+		from { transform: translateY(0);}
+		to { transform: translateY(100vh);}
+}
+
+.transBottomBack {
+	animation: transBottomBack .4s ease;
+	transform: translateY(0);
+}
+	@keyframes transBottomBack {
+		from { transform: translateY(100vh);}
+		to { transform: translateY(0);}
+}
+
+.fadeOut {
+	animation: fadeOut 1s ease;
+}
+	@keyframes fadeOut {
+		from {  opacity: 1;}
+		to {  opacity: 0;}
+}
+
+.fadeIn {
+	animation: fadeIn 1s ease;
+}
+	@keyframes fadeIn {
+		from {  opacity: 0;}
+		to {  opacity: 1;}
+}
+.rotate_45 {
+	transition: all .5s ease;
+	transform: rotateZ(45deg);
+}
+.rotate_-45 {
+	transition: all .5s ease;
+	transform: rotateZ(-45deg);
+}
+.rotate_90 {
+	transition: all .5s ease;
+	transform: rotateZ(90deg);
+}
+.rotate_135 {
+	transition: all .5s ease;
+	transform: rotateZ(135deg);
+}
+.rotate_225 {
+	transition: all .4s ease;
+	transform: rotateZ(225deg);
+}
+.rotate_-225 {
+	transition: all .4s ease;
+	transform: rotateZ(-225deg);
+}
+.rotate_360 {
+	transition: all .3s ease;
+	transform: rotateZ(360deg);
+}
+.rotate_-360 {
+	transition: all .3s ease;
+	transform: rotateZ(-360deg);
+}
+
+.rotate_out_360 {
+	transition: all .3s ease;
+	transform: rotateZ(360deg);
+	width: 0px;
+}
+
+.icon {
+	position: relative;
+	transition: all .6s ease;
+}
+
+.icon:nth-child(1) {
+	transform: rotateZ(225deg);
+	top: 4px;
+}
+.icon:nth-child(2) {
+	width: 0!important;
+	animation: hide_icon 1s ease;
+	display: none;
+}
+@keyframes hide_icon {
+	from {
+    width: 40px;
+    display: flex;
+	}
+	to {
+		width: 0;
+		display: none;
+	}
+}
+.icon:nth-child(3) {
+	transform: rotateZ(-225deg);
+	bottom: 5px;
+}

@@ -1,0 +1,27 @@
+@import '../modules/base'
+@import '../modules/mixins'
+
+.navbar__mail
+  position: absolute
+  z-index: 9
+  right: 0
+  width: 100vw
+  background: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+  animation: emailslideleft 400ms
+
+  @keyframes emailslideleft
+    from
+      right: 100vw
+    to
+      right: 0  
+
+  .navbar__text
+    margin-right: 20px
+    color: $darkblue
+
+  .navbar__link
+    text-decoration: none
+    color: $darkblue

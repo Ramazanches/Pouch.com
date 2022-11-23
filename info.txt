@@ -1,0 +1,31 @@
+В package.json меняем: 
+  "main": "gulpfile.js",
+  "type": "module",
+
+
+ npm i gulp-cli -g
+ npm i gulp -D
+ npm i -D del
+ npm i -D gulp-file-include
+ npm i -D gulp-replace
+ npm i -D gulp-webp-html-nosvg
+
+ src:
+    files:
+    html:
+      about.html
+      index.html
+    img:
+ dist
+
+ gulpfile.js
+
+ gulp:
+ 		config:
+ 		  ftp.js
+ 		  path.js
+ 		  plugins.js
+ 		tasks:
+ 			copy.js
+      html.js
+ 			reset.js

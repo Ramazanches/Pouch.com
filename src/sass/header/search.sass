@@ -1,0 +1,57 @@
+@import '../modules/base'
+@import '../modules/mixins'
+
+.navbar__search 
+	position: absolute
+	z-index: 9
+	right: 0
+	width: 100vw
+	background: #fff
+	display: flex
+	justify-content: center
+	align-items: center
+	animation: slideleft 400ms ease
+
+	@keyframes slideleft
+		from
+			right: 100vw
+		to
+			right: 0	
+
+	.navbar__search__inp
+		position: relative
+		width: 150px
+		height: 100%
+		padding: 15px
+		color: #888
+		font-size: 20px
+		text-align: center
+		transition: all 1s ease
+		border: 1px solid transparent
+		outline: none
+		transition: all 0.4s ease
+
+		&:hover 
+			border: 1px solid #fff
+
+		&:focus 
+			border: 1px solid #fff
+
+	.navbar__search__icon
+		display: block
+		.navbar__search__link 
+			width: 100%
+			text-decoration: none
+
+			.fa
+				width: 100%
+				padding: auto !important
+				position: relative
+				z-index: 10
+				color: #777
+				cursor: pointer
+
+			svg
+				path
+					fill: #777
+

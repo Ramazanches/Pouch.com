@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head/head.html', {
+	"title": "Вход"
+})
+@@include('html/header/header.html')
+<main class="signin">
+	<div class="signin__wrapper">
+		<h1 class="signin__title h3">Sign In</h1>
+		<form class="signin__form" enctype="text/plain">
+		  <ul class="signin__list">
+		    <li class="signin__item">
+		      <label class="signin__label">
+		      	<i class="bi bi-envelope-fill"></i>
+		      </label>
+		      <input class="signin__inp" type="email" name="email" placeholder="Email" required>
+		    </li>
+		    <li class="signin__item">
+		      <label class="signin__label">
+		      	<i class="bi bi-door-open"></i>
+		      </label>
+		      <input class="signin__inp" type="password" name="password" placeholder="Password" required>
+		    </li>
+		    <li class="signin__item">
+		      <button class="signin__btn h5" type="submit">Sign In</button>
+		    </li>
+		  </ul>
+		</form>
+	</div>
+	<div class="signin__footer">
+			<p class="signin__conditions p2">Not registered yet?
+				<a href="signup.html" class="signin__link"> Register</a>
+			an account</p>
+			<p class="signin__conditions p2">By continuing, you agree to BagPack
+				<a href="conditions.html" class="signin__link p2">Conditions of Use</a>
+				 and
+				<a href="privacy.html" class="signin__link p2">Privacy Notice</a>.
+			</p>
+	</div>
+
+</main>
+@@include('html/footer.html')

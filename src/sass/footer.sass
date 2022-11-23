@@ -1,0 +1,134 @@
+@import 'modules/base'
+@import "modules/mixins"
+
+.footer
+	margin-top: 60px
+	font-family: $roboto
+	display: flex
+	flex-direction: column
+	background: $blueDarkOp
+
+	.footer__nav
+		width: 100%
+		height: 50px
+		background: rgba(255, 255, 255, .4)
+		list-style-type: none
+		display: flex
+		justify-content: space-around
+		align-items: center
+		box-sizing: border-box
+
+		@media screen and (max-width: 375px)
+			display: none
+
+		.footer__nav__item
+			width: 100%
+			height: 100%
+			padding: 0 3vw
+			cursor: pointer
+			transition: all .8s ease
+			display: flex
+			justify-content: center
+			align-items: center
+			box-sizing: content-box
+
+			&:hover
+				background: $whiteOp2
+
+			.footer__nav__link
+				width: 100%
+				font-family: $lat
+				font-weight: medium
+				text-decoration: none
+				color: $darkBlue4
+				transition: all 0.2s ease-in
+				letter-spacing: 1px
+				white-space: pre
+				box-sizing: content-box
+				display: flex
+				justify-content: center
+
+	.footer__social
+		display: flex
+		flex-direction: column
+		margin-bottom: 20px
+
+		.footer__title
+			margin: 0
+			padding: 25px 0
+			width: 100%
+			text-align: center
+			word-wrap: pre-wrap
+			color: $darkBlue4
+
+		.footer__list-group
+			display: flex
+			justify-content: center
+
+			.footer__list
+				padding: 0
+				list-style-type: none
+				display: flex
+				justify-content: center
+
+				@media screen and (max-width: 768px)
+					padding: 10px 0
+
+				.footer__list__item
+					display: flex
+					justify-content: center
+					padding: 20px 0
+					margin: 0 1.2vw
+					padding: 0
+					width: calc(28px + 0.5vw)
+					min-width: 28px
+					max-width: 30px
+
+					@media screen and (max-width: 768px)
+						flex-direction: column
+						align-items: start
+						padding: 15px 0
+
+					@media screen and (max-width: 576px)
+						padding: 0
+
+					.footer__list__link
+						text-decoration: none
+						width: 100%
+						color: $darkblue
+
+						& .fa
+							color: $blueOp
+							width: 100%
+							font-size: calc(16px + 0.5vw)
+							text-align: center
+							padding: 0.4vw
+							border-radius: 3px
+
+							@media screen and (max-width: 576px)
+								padding: 0.8vw 0.4vw
+
+							&:hover
+								width: 100%
+								color: #fff
+								background: $blueOp
+								font-weight: 300
+
+	.footer__address
+		padding: $inner 0
+		color: $gray
+		font-size: 12px
+		display: inline-block
+		width: auto
+		text-align: center
+
+		.footer__address__title
+			font-size: 17px
+			color: $darkBlue4
+
+		.footer__address__link
+			text-decoration: none
+			color: $darkBlue4
+
+		.footer__address__text
+			display: block

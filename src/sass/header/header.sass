@@ -1,0 +1,138 @@
+@import '../modules/base'
+@import '../modules/mixins'
+
+.navbar
+  position: relative
+  z-index: 10
+  background: $lightblue
+  box-sizing: border-box
+
+  .navbar__nav
+    margin: 0
+    padding: 
+      top: $inner
+      bottom: $inner
+    @include media3(padding-right, 35, 25, 15)
+    @include media3(padding-left, 35, 25, 15)
+    position: relative
+    z-index: 10
+    display: flex
+    align-items: center
+    box-sizing: border-box
+    @media screen and (max-width: 575px)
+      flex-direction: column
+      align-items: flex-start
+      row-gap: 10px
+
+    .navbar__brand
+      margin-right: 1900px
+      display: flex
+      align-items: center
+      @include mdXl(margin-right, 1900, 1300)
+      @include mdLg(margin-right, 1300, 850)
+      @include mdMd(margin-right, 850, 260)
+
+      .navbar__logo
+        text-decoration: none
+        color: #FFF
+        font-family: $ral
+
+        .navbar__img
+          position: relative
+          margin-left: 1vw
+          width: 7vw
+          height: 50px
+          min-width: 120px
+          min-height: 50px
+          color: #E4E4F5
+          font: bolder 16px $ral 
+          letter-spacing: 0.4px
+          box-shadow: 1px 1px 5px #fff, -1px -1px 5px #fff
+          border-radius: 4px
+          box-shadow: 1px 1px 3px #24396E, -1px -1px 3px #24396E
+          display: flex
+          justify-content: center
+          align-items: center
+          cursor: pointer
+
+          &:hover
+            animation: shakeX 1s 0.5s ease
+
+    .navbar__contacts-menu
+      display: flex
+      column-gap: $inner
+
+      .navbar__burger
+        display: flex
+        flex-direction: column
+        row-gap: 7px
+        cursor: pointer
+        display: none
+
+        @media screen and (max-width: 768px)
+          display: flex
+          justify-content: center
+        @media screen and (max-width: 575px)
+          width: 100%
+
+        &:hover > .navbar__burger__title
+          display: block !important
+
+        .navbar__burger__icon
+          position: relative
+          height: 2px
+          width: 40px
+          background: #fff
+
+        .navbar__burger__title
+          position: absolute
+          top: 5px
+          margin: 0 auto
+          color: #fff
+          display: none
+          font-family: $roboto
+          font-size: 11px
+  
+  .navbar__menu
+      width: 100%
+      padding: $inner $inner $inner 0
+      background-color: $darkblue
+      display: flex
+      justify-content: flex-start
+      box-sizing: border-box
+
+      @media screen and (max-width: 576px)
+        display: none
+
+.left-search
+  left: 100vw
+
+.hidesearch
+  left: 100vw
+  opacity: 0
+  display: none
+
+.shownav
+  display: block
+  animation: show 0.5s ease
+
+  @keyframes show
+    from
+      right: 100vw
+      opacity: 0
+
+    to
+      right: 1px
+      opacity: 1
+
+.hidenav
+  animation: hide 1s ease-out
+
+  @keyframes hide
+    from
+      right: 1px
+      opacity: 1
+
+    to
+      right: 100vw
+      opacity: 0

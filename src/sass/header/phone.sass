@@ -1,0 +1,59 @@
+@import '../modules/base'
+@import '../modules/mixins'
+
+.navbar__phone
+  position: absolute
+  z-index: 10
+  top: 100%
+  background: #fff
+  padding: 7px 7px 0 7px
+  min-width: 280px
+  border-radius: 2px
+  display: flex  
+    
+  .phone__text
+    position: relative
+    z-index: 9
+    color: $darkblue
+    padding: 0 4px
+    border-radius: 1px
+    font-family: $roboto
+    font-size: 14px
+    white-space: pre
+    height: 25px
+    display: flex
+    align-items: center
+
+  .phone__list
+    width: 50%
+    position: relative
+    z-index: 9
+    padding: 0
+    display: flex
+    flex-direction: column
+
+    .phone__item
+      position: relative
+      padding: 0 4px
+      width: 100%      
+      height: 25px
+      display: flex
+      flex-wrap: nowrap
+      align-items: center
+      border: 1px solid transparent
+
+      &:hover
+        text-decoration: underline
+
+      .phone__link
+        color: $darkblue
+        text-decoration: none
+        font-family: $roboto
+        font-size: 13px
+        width: 100%
+        height: 100%
+        white-space: pre
+        display: flex
+        flex-wrap: nowrap
+        flex-direction: row
+        align-items: flex-start 

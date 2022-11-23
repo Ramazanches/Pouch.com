@@ -1,0 +1,108 @@
+@import '../modules/base'
+@import '../modules/mixins'
+
+.navbar__mobile-menu
+  position: absolute
+  z-index: 10
+  right: 4vw
+  width: 20vw
+  min-width: 240px
+  list-style-type: none
+  margin: 0
+  padding: 0
+  border: none
+  background: #000033
+  transition: all 1s ease-in
+  border-radius: 2px
+  display: none
+
+  @media screen and (max-width: 576px)
+    min-width: 200px
+
+  @media screen and (max-width: 350px)
+    right: 15px
+
+  ._list__item
+    display: flex
+    column-gap: 10px
+    
+  .list__item
+    position: relative
+    left: 0
+    width: 100%
+    padding: 1.5vw 0 1.5vw 0.8vw
+    border-bottom: 1px solid transparent
+    display: flex
+    transition: left 0.5s ease
+
+    &:hover
+      left: 15px
+      background: #111159
+
+    .list__link
+      font-family: 'Lato', sans-serif
+      font-size: 13px
+      font-weight: medium
+      text-decoration: none
+      color: #C0C0C0FF
+      padding-left: 3vw
+      transition: all 0.2s ease-in
+      text-transform: uppercase
+      cursor: pointer
+
+      &:nth-child(4)
+        margin-right: 10px
+
+      &:hover
+        text-shadow: 2px 0px 10px #fff
+        letter-spacing: 1px
+
+    .list__icon
+      display: flex
+      align-items: center
+      cursor: pointer
+
+      &:hover
+        animation: rotateplus 1s ease
+
+      @keyframes rotateplus
+        from
+          transform: rotateY(0)
+        to
+          transform: rotateY(360deg)
+
+    .list__dropdown-mobile
+      position: absolute
+      z-index: 10
+      right: 4vw
+      width: 20vw
+      min-width: 240px
+      list-style-type: none
+      margin: 0
+      padding: 0
+      border: none
+      background: #000033
+      transition: all 1s ease-in
+      border-radius: 2px
+      display: none
+
+      .dropdown__item
+        width: 100%
+        padding: 0.5vw 0
+        cursor: pointer
+
+        &:hover
+          background-color: $lightblue
+
+        .dropdown__link
+          width: 100%
+          height: 100%
+          padding-left: 2vw
+          text-decoration: none
+          color: #C0C0C0FF
+          font-size: 11px
+          font-family: $ral
+          text-transform: uppercase
+
+          &:hover
+            color: #fff

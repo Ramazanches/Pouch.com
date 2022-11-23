@@ -1,0 +1,209 @@
+
+@import '../modules/base'
+@import '../modules/mixins'
+
+%basketTitle
+  width: 100%
+  text-align: center
+  margin: 0
+
+%basketButtons
+  min-width: 38px
+  padding: 5px 0
+  border-radius: 2px
+  color: #fff
+  text-align: center
+  border: 1px solid #fff
+  background: $darkblue
+  box-sizing: border-box
+  transition: all .5 ease
+
+  &:hover
+    color: #fff
+    border: 1px solid $darkblue
+    background: radial-gradient($darkblue5, $darkblue3 $darkblue1 $darkblue)
+    font-weight: bold
+
+/*Basket-button*/
+
+.navbar__modal-toggler
+  position: absolute
+  top: 5px
+  right: 40px
+  @include mdLgI(top, 5, 10)
+  @media (max-width: 1440px)
+    top: 10px
+  @include mdMd(right, 40, 20)
+  @include mdSm(right, 20, 15)
+  
+  &:hover
+    animation: animate__rubberBand 2s ease
+
+  @media screen and (max-width: 575px)
+    margin: 0
+
+  .bi
+    color: #E5E5F0FF
+    font-size: calc(22px + 0.4vw)
+    cursor: pointer
+
+    @media (max-width: 320px)
+      right: 43px
+      top: -7px
+
+/*Basket-Modal*/
+.navbar__modal-overlay
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.7)
+  position: fixed
+  z-index: 5
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.navbar__modal
+  justify-content: center
+  align-items: center
+
+  .modal__basket
+    position: fixed
+    margin: 7vh 8vw
+    background-color: #fefefe
+    padding: $inner
+    border: 1px solid #888
+    width: 80vw
+    height: 80vh
+    z-index: 10
+    left: 0
+    top: 0
+    color: #003
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .basket__close
+      width: 100% 
+      display: flex
+      flex-wrap: nowrap
+      justify-content: flex-end
+      align-items: center
+
+      .basket__icon
+        color: #003
+        float: right
+        font-size: 28px
+        font-weight: bold
+        cursor: pointer
+        display: flex
+        align-items: center
+        column-gap: 5px
+
+        .basket__text
+          position: relative
+          font-weight: lighter
+          text-transform: uppercase
+        
+        .basket__i
+          position: relative
+
+          &:hover
+            animation-name: animate__rotateIn
+            animation-duration: 2s
+
+    .basket__title
+      @extend %basketTitle
+    .basket__subtitle
+      @extend %basketTitle
+      margin: 20px 0
+
+    .basket__list
+      margin-top: 20px
+      padding: 0
+      width: 80%
+      list-style-type: number
+
+      @media screen and (max-width: 992px)
+        width: 90%
+
+      @media screen and (max-width: 768px)
+        width: 95%
+
+      .basket__item
+        display: flex
+        justify-content: space-between
+        border-bottom: 1px dashed $darkblue
+        padding: 10px 0
+
+        @media screen and (max-width: 430px)
+          flex-direction: column                    
+        
+        .basket__name
+          position: relative
+          width: auto
+          display: flex
+          align-items: center
+          column-gap: 5px
+
+          .basket__brand,
+          .basket__product
+            text-decoration: none
+            color: #0c0c26
+            border: 1px solid #0c0c26
+            padding: 5px 12px
+            white-space: pre
+
+        .basket__amount
+          display: flex
+          column-gap: 3px
+
+          @media screen and (max-width: 430px)
+            justify-content: flex-start
+
+          .basket__btn
+            border-radius: 2px
+            padding: 5px 25px
+            color: #fff
+            font-size: 15px
+            outline: none
+            border: 1px solid #fff
+            background: $darkblue
+            text-decoration: none
+            cursor: pointer
+
+            &:hover
+              color: $darkblue
+              border: 1px solid $darkblue
+              background: #fff
+
+          .basket__minus
+            @extend %basketButtons
+            cursor: pointer
+
+          .basket__plus
+            @extend %basketButtons
+            cursor: pointer
+
+          .basket__out
+            @extend %basketButtons
+
+          .basket__delete
+            min-width: 38px
+            padding: 5px 0
+            border-radius: 2px
+            color: #fff
+            text-align: center
+            border: 1px solid #fff
+            background: #0c0c26
+            box-sizing: border-box
+            transition: all .5 ease
+            cursor: pointer
+
+            .basket__delete__icon
+              color: #fff
+
+
+
+            
+            

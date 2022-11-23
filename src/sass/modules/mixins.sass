@@ -1,0 +1,851 @@
+@use "sass:math"
+
+$screen_1: 1920
+$screen_2: 1440
+$screen_3: 768
+$screen_4: 375
+$screen_5: 320
+
+//TO%
+@function prc($pxOne, $pxTwo) 
+	$result: math.div($pxOne, $pxTwo) * 100
+	@return $result
+
+//REM
+@function rem($px) 
+	$result: math.div($px, 16) + rem
+	@return $result
+
+//EM
+@function em($px) 
+	$result: math.div($px, 16) + em
+	@return $result
+
+
+
+@mixin media($prop, $from, $to, $max, $min) 
+	@media (max-width: em($max)) 
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+
+@mixin mdXl($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdLg($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdMd($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdSm($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdXs($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+
+@mixin mdXlI($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$from + px}  + (#{$to} - #{$from}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdLgI($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$from + px}  + (#{$to} - #{$from}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdMdI($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$from + px}  + (#{$to} - #{$from}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdSmI($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$from + px}  + (#{$to} - #{$from}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdXsI($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: #{$max + px})
+		#{$prop}: calc( #{$from + px}  + (#{$to} - #{$from}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+
+
+
+@mixin mdEmXl($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdEmLg($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdEmMd($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdEmSm($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdEmXs($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+
+@mixin mdEmXlI($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($from)  + (#{math.div($to, 16)} - #{math.div($from, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdEmLgI($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($from)  + (#{math.div($to, 16)} - #{math.div($from, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdEmMdI($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($from)  + (#{math.div($to, 16)} - #{math.div($from, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdEmSmI($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($from)  + (#{math.div($to, 16)} - #{math.div($from, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdEmXsI($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($from)  + (#{math.div($to, 16)} - #{math.div($from, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+
+
+
+@mixin mdRemXl($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdRemLg($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdRemMd($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdRemSm($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mdRemXs($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+
+@mixin mdRemXlI($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdRemLgI($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdRemMdI($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdRemSmI($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mdRemXsI($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+
+
+
+
+
+
+
+
+@mixin mediaXl($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaLg($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaMd($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaSm($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaXs($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+
+@mixin mediaXlI($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaLgI($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaMdI($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaSmI($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaXsI($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: em($max))
+		#{$prop}: calc( #{$to + px}  + (#{$from} - #{$to}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+
+
+
+@mixin mediaEmXl($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaEmLg($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaEmMd($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaEmSm($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaEmXs($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+
+@mixin mediaEmXlI($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaEmLgI($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaEmMdI($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaEmSmI($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaEmXsI($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: #{em($max)})
+		#{$prop}: calc( em($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+
+
+
+@mixin mediaRemXl($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaRemLg($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaRemMd($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaRemSm($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+@mixin mediaRemXs($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$min + px}) / (#{$max} - #{$min}) )
+
+
+@mixin mediaRemXlI($prop, $from, $to)
+	$max: 2560
+	$min: 1920
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaRemLgI($prop, $from, $to)
+	$max: 1920
+	$min: 1440
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaRemMdI($prop, $from, $to)
+	$max: 1440
+	$min: 768
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaRemSmI($prop, $from, $to)
+	$max: 768
+	$min: 375
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+@mixin mediaRemXsI($prop, $from, $to)
+	$max: 375
+	$min: 320
+	@media (max-width: em($max))
+		#{$prop}: calc( rem($to)  + (#{math.div($from, 16)} - #{math.div($to, 16)}) * (100vw - #{$max + px}) / (#{$min} - #{$max}) )
+
+
+
+
+$maxWidth: 1280
+
+@mixin adaptiv-font($pcSize, $mobSize) 
+	$addSize: $pcSize - $mobSize
+	$addMobSize: $addSize + $addSize * 0.7
+	@media (max-width: 767px) 
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}))
+	@media (min-width: 767px) 
+		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}))
+
+
+
+@mixin media5($prop, $size_1, $size_2, $size_3, $size_4, $size_5)
+	#{$prop}: #{$size_1 + px} 
+	
+	@media (min-width: em($screen_1)) 
+		#{$prop}: $size_1 + px
+	
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( #{$size_3 + px}  + (#{$size_2} - #{$size_3}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( #{$size_4 + px}  + (#{$size_3} - #{$size_4}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	
+	@media (max-width: em($screen_4)) 
+		#{$prop}: calc( #{$size_5 + px}  + (#{$size_4} - #{$size_5}) * (100vw - #{$screen_5 + px}) / (#{$screen_4} - #{$screen_5}) )
+	
+	@media (max-width: em($screen_5)) 
+		#{$prop}: $size_5 + px
+	
+
+@mixin media4($prop, $size_1, $size_2, $size_3, $size_4)
+	#{$prop}: #{$size_1 + px} 
+
+	@media (min-width: em($screen_1)) 
+		#{$prop}: $size_1 + px
+	
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( #{$size_3 + px}  + (#{$size_2} - #{$size_3}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( #{$size_4 + px}  + (#{$size_3} - #{$size_4}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	
+	@media (max-width: em($screen_4)) 
+		#{$prop}: $size_4 + px
+
+
+
+@mixin media3($prop, $size_1, $size_2, $size_3)
+	#{$prop}: #{$size_1 + px}
+
+	@media (min-width: em($screen_1))
+		#{$prop}: $size_1 + px
+	
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( #{$size_3 + px}  + (#{$size_2} - #{$size_3}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	
+	@media (max-width: em($screen_3))
+		#{$prop}: #{$size_3 + px}
+
+@mixin media2($prop, $size_1, $size_2)
+
+	#{$prop}: #{$size_1 + px}
+	@media (min-width: em($screen_1))
+		#{$prop}: #{$size_1 + px}
+	@if $size_1 < $size_2
+		@media (max-width: em($screen_1))
+			#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@else
+		@media (max-width: em($screen_1))
+			#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_1 + px}) / (#{$screen_2} - #{$screen_1}) )
+	
+	@media (max-width: em($screen_2))
+		#{$prop}: $size_2 + px
+
+
+
+@mixin mediaEm5($prop, $size_1, $size_2, $size_3, $size_4, $size_5) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( em($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( em($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4)) 
+		#{$prop}: calc( em($size_5)  + (#{math.div($size_4, 16)} - #{math.div($size_5, 16)}) * (100vw - #{$screen_5 + px}) / (#{$screen_4} - #{$screen_5}) )
+	@media (max-width: em($screen_5)) 
+		#{$prop}: em($size_5)
+
+
+@mixin mediaEm4($prop, $size_1, $size_2, $size_3, $size_4) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( em($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( em($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4)) 
+		#{$prop}: em($size_4)
+
+
+@mixin mediaEm3($prop, $size_1, $size_2, $size_3) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( em($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3)) 
+		#{$prop}: em($size_3)
+
+@mixin mediaEm2($prop, $size_1, $size_2) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: em($size_2)
+
+
+
+
+
+@mixin mediaRem5($prop, $size_1, $size_2, $size_3, $size_4, $size_5)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( rem($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3))
+		#{$prop}: calc( rem($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4))
+		#{$prop}: calc( rem($size_5)  + (#{math.div($size_4, 16)} - #{math.div($size_5, 16)}) * (100vw - #{$screen_5 + px}) / (#{$screen_4} - #{$screen_5}) )
+	@media (max-width: em($screen_5))
+		#{$prop}: rem($size_5)
+
+@mixin mediaRem4($prop, $size_1, $size_2, $size_3, $size_4)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( rem($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3))
+		#{$prop}: calc( rem($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4))
+		#{$prop}: rem($size_4)
+
+@mixin mediaRem3($prop, $size_1, $size_2, $size_3)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( rem($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3))
+		#{$prop}: rem($size_3)
+
+@mixin mediaRem2($prop, $size_1, $size_2)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: rem($size_2)
+
+
+
+
+
+
+
+
+
+
+@mixin md5($prop, $size_1, $size_2, $size_3, $size_4, $size_5)
+	#{$prop}: #{$size_1 + px} 
+	
+	@media (min-width: em($screen_1)) 
+		#{$prop}: $size_1 + px
+	
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( #{$size_3 + px}  + (#{$size_2} - #{$size_3}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( #{$size_4 + px}  + (#{$size_3} - #{$size_4}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	
+	@media (max-width: em($screen_4)) 
+		#{$prop}: calc( #{$size_5 + px}  + (#{$size_4} - #{$size_5}) * (100vw - #{$screen_5 + px}) / (#{$screen_4} - #{$screen_5}) )
+	
+	@media (max-width: em($screen_5)) 
+		#{$prop}: $size_5 + px
+	
+
+@mixin md4($prop, $size_1, $size_2, $size_3, $size_4)
+	#{$prop}: #{$size_1 + px} 
+
+	@media (min-width: em($screen_1)) 
+		#{$prop}: $size_1 + px
+	
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( #{$size_3 + px}  + (#{$size_2} - #{$size_3}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( #{$size_4 + px}  + (#{$size_3} - #{$size_4}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	
+	@media (max-width: em($screen_4)) 
+		#{$prop}: $size_4 + px
+
+
+
+@mixin md3($prop, $size_1, $size_2, $size_3)
+	#{$prop}: #{$size_1 + px}
+
+	@media (min-width: em($screen_1))
+		#{$prop}: $size_1 + px
+	
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( #{$size_3 + px}  + (#{$size_2} - #{$size_3}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	
+	@media (max-width: em($screen_3))
+		#{$prop}: #{$size_3 + px}
+
+@mixin md2($prop, $size_1, $size_2)
+
+	#{$prop}: #{$size_1 + px}
+	@media (min-width: em($screen_1))
+		#{$prop}: #{$size_1 + px}
+	@if $size_1 < $size_2
+		@media (max-width: em($screen_1))
+			#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@else
+		@media (max-width: em($screen_1))
+			#{$prop}: calc( #{$size_2 + px}  + (#{$size_1} - #{$size_2}) * (100vw - #{$screen_1 + px}) / (#{$screen_2} - #{$screen_1}) )
+	
+	@media (max-width: em($screen_2))
+		#{$prop}: $size_2 + px
+
+
+
+@mixin mdEm5($prop, $size_1, $size_2, $size_3, $size_4, $size_5) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( em($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( em($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4)) 
+		#{$prop}: calc( em($size_5)  + (#{math.div($size_4, 16)} - #{math.div($size_5, 16)}) * (100vw - #{$screen_5 + px}) / (#{$screen_4} - #{$screen_5}) )
+	@media (max-width: em($screen_5)) 
+		#{$prop}: em($size_5)
+
+
+@mixin mdEm4($prop, $size_1, $size_2, $size_3, $size_4) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( em($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3)) 
+		#{$prop}: calc( em($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4)) 
+		#{$prop}: em($size_4)
+
+
+@mixin mdEm3($prop, $size_1, $size_2, $size_3) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: calc( em($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3)) 
+		#{$prop}: em($size_3)
+
+@mixin mdEm2($prop, $size_1, $size_2) 
+	#{$prop}: em($size_1)
+	@media (min-width: em($screen_1)) 
+		#{$prop}: em($size_1)
+	@media (max-width: em($screen_1)) 
+		#{$prop}: calc( em($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2)) 
+		#{$prop}: em($size_2)
+
+
+
+
+
+@mixin mdRem5($prop, $size_1, $size_2, $size_3, $size_4, $size_5)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( rem($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3))
+		#{$prop}: calc( rem($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4))
+		#{$prop}: calc( rem($size_5)  + (#{math.div($size_4, 16)} - #{math.div($size_5, 16)}) * (100vw - #{$screen_5 + px}) / (#{$screen_4} - #{$screen_5}) )
+	@media (max-width: em($screen_5))
+		#{$prop}: rem($size_5)
+
+@mixin mdRem4($prop, $size_1, $size_2, $size_3, $size_4)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( rem($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3))
+		#{$prop}: calc( rem($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$screen_4 + px}) / (#{$screen_3} - #{$screen_4}) )
+	@media (max-width: em($screen_4))
+		#{$prop}: rem($size_4)
+
+@mixin mdRem3($prop, $size_1, $size_2, $size_3)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: calc( rem($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$screen_3 + px}) / (#{$screen_2} - #{$screen_3}) )
+	@media (max-width: em($screen_3))
+		#{$prop}: rem($size_3)
+
+@mixin mdRem2($prop, $size_1, $size_2)
+	#{$prop}: rem($size_1)
+	@media (min-width: em($screen_1))
+		#{$prop}: rem($size_1)
+	@media (max-width: em($screen_1))
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$screen_2 + px}) / (#{$screen_1} - #{$screen_2}) )
+	@media (max-width: em($screen_2))
+		#{$prop}: rem($size_2)
+
+
+
+@mixin mediaFont($prop: font-size, $size_1, $size_2, $size_3, $size_4, $size_5, $size_6, $size_7)
+
+	$mkt_1: 2560
+	$mkt_2: 1920
+	$mkt_3: 1440
+	$mkt_4: 1280
+	$mkt_5: 960
+	$mkt_6: 670
+	$mkt_7: 320
+
+	#{$prop}: rem($size_1)
+
+	@media (max-width: em($mkt_1)) 
+		#{$prop}: calc( rem($size_2)  + (#{math.div($size_1, 16)} - #{math.div($size_2, 16)}) * (100vw - #{$mkt_2 + px}) / (#{$mkt_1} - #{$mkt_2}) )
+
+	@media (max-width: em($mkt_2))
+		#{$prop}: calc( rem($size_3)  + (#{math.div($size_2, 16)} - #{math.div($size_3, 16)}) * (100vw - #{$mkt_3 + px}) / (#{$mkt_2} - #{$mkt_3}) )
+
+	@media (max-width: em($mkt_3))
+		#{$prop}: calc( rem($size_4)  + (#{math.div($size_3, 16)} - #{math.div($size_4, 16)}) * (100vw - #{$mkt_4 + px}) / (#{$mkt_3} - #{$mkt_4}) )
+
+	@media (max-width: em($mkt_4))
+		#{$prop}: calc( rem($size_5)  + (#{math.div($size_4, 16)} - #{math.div($size_5, 16)}) * (100vw - #{$mkt_5 + px}) / (#{$mkt_4} - #{$mkt_5}) )
+
+	@media (max-width: em($mkt_5))
+		#{$prop}: calc( rem($size_6)  + (#{math.div($size_5, 16)} - #{math.div($size_6, 16)}) * (100vw - #{$mkt_6 + px}) / (#{$mkt_5} - #{$mkt_6}) )
+
+	@media (max-width: em($mkt_6))
+		#{$prop}: calc( rem($size_7)  + (#{math.div($size_6, 16)} - #{math.div($size_7, 16)}) * (100vw - #{$mkt_7 + px}) / (#{$mkt_6} - #{$mkt_7}) )
+
+	@media (max-width: em($mkt_7))
+		#{$prop}: rem($size_7)
+
+
+
+@mixin fontFace($font_name, $file_name, $weight, $style: normal) 
+	@font-face 
+		font-family: $font_name 
+		font-display: swap 
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2") 
+		font-weight: $weight 
+		font-style: $style
+
+@mixin shadow($color:  rgba(0, 0, 0, .5), $width: 100%, $height: 100%, $index: 5) 
+	content: ""
+	display: block
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	width: $width
+	height: $height
+	background:$color
+	transition: all .5s ease
+	z-index: $index
+

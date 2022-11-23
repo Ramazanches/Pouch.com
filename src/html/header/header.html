@@ -1,0 +1,62 @@
+<header class="navbar">
+		<div class="navbar__nav">
+
+			<div class="navbar__brand">
+				<a href="index.html" class="navbar__logo">
+					Pouch.com
+				</a>
+			</div>
+			
+			<div class="navbar__contacts-menu">
+				<!-- Contacts -->	
+				@@include('contacts.html')
+
+				<div id="menuBurger" class="navbar__burger">
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__icon"></div>
+					<div class="navbar__burger__title">Menu</div>
+				</div>				
+			</div>
+
+			<!-- Location -->		
+			@@include('location.html')
+
+			<!-- Search line -->	
+			<form class="navbar__search hide">
+				<input class="navbar__search__inp" type="search" name="search" id="search" placeholder="Search">
+				<div class="navbar__search__icon">
+					<a href="" class="navbar__search__link">
+						<i class="fa fa-search"></i>
+					</a>
+				</div>
+			</form>
+
+			<!-- Language -->
+			<div class="navbar__lang lang hide" id="langModal">
+				<p class="lang__text">Choose language:</p>
+				<ul class="lang__list"></ul>
+			</div>
+			<!-- Phone -->  
+			@@include('phone.html')
+
+			<!-- Email -->
+			<div class="navbar__mail hide">
+				<span class="navbar__text">Email us:</span>
+				<a 
+				href="mailto:ramazan.gallyamoff@gmail.com" 
+				class="navbar__link">ramazan.gallyamoff@gmail.com</a>
+			</div>
+
+			<!-- Basket -->
+			@@include('basket.html')
+
+
+		</div>
+
+		<div class="navbar__menu">
+			@@include('desc-menu.html')
+			@@include('mobile-menu.html')
+		</div>
+
+</header>

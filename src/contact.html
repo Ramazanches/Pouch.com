@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head/head.html', {
+  "title": "Контакты"
+})
+@@include('html/header/header.html')
+
+<main class="contact">
+  <div class="contact__container">
+    <h3 class="contact__title h3">Contact Us</h3>
+    <form class="contact__form" action="signup.php" method="post" enctype="text/plain">
+      <ul  class="contact__list">
+        <li class="contact__item">
+          <label class="contact__label"><i class="bi bi-person-fill"></i></label>
+          <input class="contact__inp" type="text" name="firstname" placeholder="First Name" required>
+        </li>
+        <li class="contact__item">
+          <label class="contact__label"><i class="bi bi-person-fill"></i></label>
+          <input class="contact__inp" type="text" name="lastname" placeholder="Last Name" required>
+        </li>
+        <li class="contact__item">
+          <label class="contact__label"><i class="bi bi-emoji-smile"></i></label>
+          <input class="contact__inp" type="text" name="townborn" placeholder="Townborn" required>
+        </li>
+        <li class="contact__item">
+          <label class="contact__label"><i class="bi bi-envelope-fill"></i></label>
+          <input class="contact__inp" type="email" name="email" placeholder="Email" required>
+        </li>
+        <li class="contact__item">
+          <label class="contact__label"><i class="bi bi-telephone-fill"></i></label>
+          <input class="contact__inp" type="tel" name="phone" placeholder="Phone" required>
+        </li>
+        <li class="contact__item">
+          <button class="contact__btn p1" type="submit">Ask</button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</main>
+
+@@include('html/footer.html')

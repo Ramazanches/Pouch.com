@@ -1,0 +1,412 @@
+@import 'modules/base'
+@import 'modules/mixins'
+
+%gap_5px
+  display: flex
+  align-items: center
+  column-gap: 5px
+
+
+%btn
+  padding: 9px 0
+  border-radius: $bdrs
+  text-align: center
+  color: $lightblue
+  border: 1px solid  $lightblue
+  cursor: pointer
+  font-size: 18px
+
+.catalog
+  font-family: $roboto
+  width: 100vw
+  padding-bottom: 800px
+  padding-top: 0
+  display: flex
+  justify-content: flex-start
+  flex-direction: row
+  flex-wrap: nowrap
+  background: url('@img/catalog/lamp.jpg')
+  background-size: contain
+  background-attachment: fixed
+
+  .catalog__sidebar
+    position: absolute
+    z-index: 8
+    padding: $inner
+    margin: 0 !important
+    width: 230px
+    background: rgba(255, 255, 255, .7)
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    row-gap: 20px
+
+    @media screen and (max-width: 576px)
+      left: -210px
+      background: $darkblue
+      border: 1px solid $gray
+      border-radius: $bdrs
+      transition: all 0.7s ease-in
+      cursor: pointer
+
+    &:hover
+      background: #DDD
+      left: 0
+
+    .catalog__sidebar__title
+      @extend %btn
+
+    .catalog__sidebar__list
+      padding: 0
+      display: flex
+      flex-direction: column
+      row-gap: 5px
+
+      .list__item
+        display: block
+
+        .list__link
+          text-decoration: none
+          color: $gray
+
+    .catalog__sidebar__brands
+      display: flex
+      flex-direction: column
+      row-gap: 20px
+
+      .brands__title
+        @extend %btn
+
+      .brands__search
+        width: 100%
+        margin-top: 15px
+        display: flex
+        
+        .brands__search__inp
+          position: relative
+          width: 100%
+          border: 1px solid $gray2
+          background-color: #fff
+          font-size: 13px
+          padding: 10px 4px
+          border-radius: $bdrs
+          color: $gray
+
+          &[placeholder]          
+            text-overflow: ellipsis 
+
+      .brands__list
+        padding: 0
+        display: flex
+        flex-direction: column
+        row-gap: 5px
+
+        .list__item
+          display: flex
+          align-items: center
+
+          .list__inp
+            width: 25px
+            height: 25px
+            border: 1px solid $gray2
+            background-color: #fff
+
+          .list__brand
+            color: $gray
+            font-size: 14px
+            margin-left: 5px
+            margin-left: 10px
+          
+          .list__quality
+            color: $gray
+            font-size: 14px
+            margin-left: 5px
+            
+
+    .catalog__sidebar__filter    
+      display: block
+
+      .filter__title
+        @extend %btn
+
+      .filter__wrapper
+        margin-top: 20px
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+        .filter__label
+          width: 50%
+
+          .filter__span
+            width: 100%
+            color: $gray
+            text-transform: uppercase
+
+          .filter__inp
+            width: 95%
+            border: 1px solid $gray2
+            background-color: #fff
+            font-size: 13px
+            padding: 10px
+            border-radius: $bdrs
+            color: $gray
+            box-sizing: border-box
+
+
+    .catalog__sidebar__discount
+      margin-top: 20px 
+      width: 100%
+
+      .discount__title
+        @extend %btn
+
+      .discount__form
+        margin-top: 15px
+        width: 100%
+
+        .discount__list
+          padding: 0
+          margin: 0
+
+          .discount__item
+            display: flex
+            align-items: center
+
+            .discount__inp
+              width: 15px
+              height: 15px
+
+            .discount__span
+              margin: 0
+              margin-left: 10px
+              color: $gray
+              cursor: pointer
+
+        .discount__reset
+          width: 100%
+          margin: 15px 0
+          padding: 15px 0
+          cursor: pointer
+          font-family: Roboto,sans-serif
+          text-transform: uppercase
+          border-radius: 3px
+          color: #2a2a82
+          border: 1px solid #2a2a82
+
+          &:hover
+            color: #fff
+            background: $darkblue
+
+  .catalog__section
+    position: relative
+    left: 230px
+    width: 77%
+    margin: 0 !important
+    box-sizing: border-box
+    background: rgba(255, 255, 255, .5)
+
+    @media screen and (max-width: 576px)
+      left: 30px
+      width: 95%
+    
+    .catalog__section__sort
+      position: relative
+      padding: $inner 0
+      display: flex
+      column-gap: $inner
+      align-items: center   
+      justify-content: center
+      width: 100%
+
+      @media screen and (max-width: 1024px)
+        align-items: flex-start
+        justify-content: flex-start
+        margin: 20px 0
+        
+      .sort__title
+        display: flex
+        align-items: center
+        white-space: pre
+        margin: 0
+        font-family: $ral
+            
+
+      .sort__buttons
+        position: relative
+        display: grid
+        grid-template-columns: repeat(4, auto-fill)
+        grid-auto-flow: column
+        grid-gap: 0 10px
+        padding: 0
+        margin: 0
+
+        @media screen and (max-width: 768px)
+          margin-left: 15px
+
+        @media screen and (max-width: 320px)
+          align-items: flex-start
+          justify-content: flex-start
+          flex-direction: column
+
+        .sort__btn
+          padding: 0
+          border: none
+          color: $gray
+          white-space: pre
+          cursor: pointer
+          font-family: $ral
+          outline: none
+              
+          &::before
+            @include shadow(#00004c, 0%, 1px) 
+            position: relative
+            top: 120%
+
+          &:hover
+            color: #00004c
+            // border-bottom: 1px solid #00004c
+
+            &::before
+              width: 100%
+
+
+
+
+    .catalog__section__gallery
+      width: 100%
+      display: flex
+      flex-direction: column
+
+      .gallery__list
+        display: grid
+        grid-template-columns: repeat(3, minmax(200px, 250px))
+        grid-gap: 15px
+        justify-content: center
+
+        .gallery__item
+          padding: $inner
+          row-gap: calc($inner + 5px)
+          display: flex
+          flex-direction: column
+          align-items: center
+          border-radius: $bdrs
+          cursor: pointer
+          border: 1px solid transparent
+
+          &:hover
+            border: 1px solid $lightblue
+
+          &:hover > .gallery__content > .gallery__likes
+            visibility: visible !important
+        
+          .gallery__item__link
+            width: 100%
+            text-decoration: none
+
+          .gallery__item__img
+            display: block
+            width: 100%
+            border-radius: $bdrs
+
+            &:hover
+              filter: saturate(130%)
+
+          .gallery__content
+            width: 100%
+            display: flex
+            flex-direction: column
+            row-gap: 10px
+            color: $lightblue
+            box-sizing: border-box
+
+            .gallery__price
+              font-weight: bold
+              font-size: 14px
+              display: flex
+              justify-content: center
+              column-gap: $inner
+
+              .price__current
+                display: flex
+                align-items: flex-start
+
+                .price__current__text
+                  font-size: 12px
+                  @extend %gap_5px
+
+              .price__last
+                .price__last__text
+                  font-size: 11px
+                  height: 100%
+                  @extend %gap_5px
+
+                  .svg-inline--fa
+                    max-height: 20px
+
+              .gallery__discount
+                display: flex
+                align-items: center
+                column-gap: 5px
+
+                .gallery__discount__icon
+                  font-size: 12px
+                  color: $lightblue
+
+                .gallery__discount__text
+                  display: flex
+
+            .gallery__good
+              display: flex
+              flex-direction: column
+              align-items: center
+              row-gap: 5px
+              color: $lightblue
+
+              .gallery__brand
+                font-size: 13px
+
+              .gallery__name
+                font-size: 12px
+
+              .gallery__rating
+                width: 100%
+                display: flex
+                column-gap: 10px
+                justify-content: center
+            
+            .gallery__likes
+              width: 100%
+              display: flex
+              align-items: center
+              justify-content: space-between
+              visibility: hidden
+              box-sizing: border-box
+
+              .likes__inp
+                border: none
+                outline: none
+                color: #fff
+                background: $lightblue
+                font-size: 14px
+                padding: 8px 12px
+                border-radius: $bdrs
+                cursor: pointer
+
+              .likes__icon
+                color: $lightblue
+                font-size: 17px
+                font-weight: bolder
+                cursor: pointer
+                transition: all 0.5s ease
+
+                .likes__span
+                  position: relative
+                  top: 4px
+                  font-size: 11px
+                  margin: 0
+                  padding: 0
+
+                ._likes__span 
+                  color: transparent !important
+
